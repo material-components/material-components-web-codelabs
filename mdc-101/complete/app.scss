@@ -1,0 +1,30 @@
+/* stylelint-disable */
+@import "@material/button/mdc-button";
+@import "@material/textfield/mdc-text-field";
+
+body {
+  height: 100%;
+  font-family: 'Roboto';
+}
+
+.header {
+  text-align: center;
+}
+
+.shrine-logo {
+  width: 150px;
+  padding: 80px;
+}
+
+.username,
+.password {
+  display: block;
+  width: 300px;
+  margin: 20px auto;
+}
+
+.button-container {
+  width: 300px;
+  text-align: end;
+  margin: auto;
+}

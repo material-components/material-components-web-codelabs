@@ -1,0 +1,21 @@
+{
+  "name": "mdc-101-web",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "start": "webpack-dev-server"
+  },
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "babel-core": "^6.22.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-es2015": "^6.9.0",
+    "css-loader": "^0.28.0",
+    "extract-loader": "^1.0.2",
+    "file-loader": "^1.1.11",
+    "sass-loader": "^6.0.4",
+    "node-sass": "^4.7.2",
+    "webpack": "^3.0.0",
+    "webpack-dev-server": "^2.4.3"
+  }
+}
