@@ -1,0 +1,42 @@
+@import "@material/button/mdc-button";
+@import "@material/textfield/mdc-text-field";
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Roboto';
+  margin: 0;
+  padding-top: 0.1px; // Prevent header h1 margin from pushing body down
+}
+
+// Login page styles
+
+.header {
+  text-align: center;
+}
+
+.shrine-logo {
+  width: 150px;
+  padding: 80px;
+}
+
+.username,
+.password {
+  display: block;
+  width: 300px;
+  margin: 20px auto;
+}
+
+.button-container {
+  width: 300px;
+  text-align: end;
+  margin: auto;
+}
+
+// Home page styles
+
+.home {
+  display: flex; // Flexbox is used to easily arrange the persistent drawer and content side-by-side
+}
