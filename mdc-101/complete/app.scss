@@ -30,8 +30,9 @@ body {
 }
 
 .button-container {
+  display: flex;
+  justify-content: flex-end;
   width: 300px;
-  text-align: end;
   margin: auto;
 }
 
