@@ -1,0 +1,131 @@
+@import "@material/button/mdc-button";
+@import "@material/drawer/mdc-drawer";
+@import "@material/image-list/mdc-image-list";
+@import "@material/list/mdc-list";
+@import "@material/textfield/mdc-text-field";
+
+$mdc-theme-primary: #33333D;
+$mdc-theme-background: #33333D;
+@import "@material/theme/mdc-theme";
+@import "@material/typography/mdc-typography";
+@import "@material/elevation/mdc-elevation";
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Roboto';
+  margin: 0;
+  padding-top: 0.1px; // Prevent header h1 margin from pushing body down
+  background-color: #33333D;
+}
+
+// Login page styles
+
+.header {
+  text-align: center;
+}
+
+.shrine-logo {
+  width: 150px;
+  padding: 80px;
+}
+
+.username,
+.password {
+  display: block;
+  width: 300px;
+  margin: 20px auto;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  width: 300px;
+  margin: auto;
+}
+
+// Home page styles
+
+.home {
+  display: flex; // Flexbox is used to easily arrange the persistent drawer and content side-by-side
+}
+
+.product-list {
+  @include mdc-image-list-masonry-columns(4);
+
+  padding: 80px 100px 0 100px;
+  overflow: auto;
+}
+
+.shrine-logo-drawer {
+  width: 48px;
+  padding: 40px 0 0;
+  margin: 0 auto;
+  fill: currentColor;
+}
+
+.shrine-title {
+  @include mdc-typography(title);
+
+  align-self: center;
+  margin-top: 0;
+}
+
+#shrine-nav-drawer {
+  text-transform: uppercase;
+  @include mdc-drawer-fill-color-accessible(#33333D);
+  border-right-color: #33333D;
+}
+
+.mdc-list {
+  margin: 70px 5px auto 5px;
+}
+
+.mdc-list .mdc-list-item {
+  @include mdc-list-item-primary-text-ink-color(rgba(255, 255, 255, .6));
+  @include mdc-typography(body2);
+
+  border-radius: 6px;
+  justify-content: center;
+}
+
+.shrine-select-item-divider {
+  width: 50px;
+  margin: 0 auto;
+  border-bottom-width: 2px;
+  border-bottom-color: #FFCF44;
+  position: relative;
+  top: -5px;
+}
+
+.mdc-list .mdc-list-item--activated {
+  @include mdc-list-item-primary-text-ink-color(rgba(255, 255, 255, 1));
+}
+
+.shrine-search-icon {
+  display: block;
+  margin: 130px auto 0;
+  padding: 12px;
+  width: 24px;
+  height: 24px;
+  color: #FFCF44;
+}
+
+.mdc-image-list__supporting {
+  justify-content: center;
+}
+
+.mdc-image-list__label {
+  @include mdc-typography(subheading2);
+}
+
+.mdc-image-list__item {
+  padding: 10px;
+}
+
+.shrine-body {
+  display: block;
+  overflow: auto;
+}
