@@ -1,0 +1,32 @@
+@import '@material/top-app-bar/mdc-top-app-bar';
+@import '@material/typography/mdc-typography';
+
+body {
+  margin: 0;
+}
+
+.demo-text-container {
+  margin: 8px;
+}
+
+.demo-controls-box {
+  @include mdc-elevation(4);
+  min-width: 160px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background-color: white;
+  padding: 10px;
+}
+
+.demo-control-checkbox {
+  margin: 12px 0;
+}
+
+.demo-control-checkbox__label {
+  margin: 0 8px;
+}
+
+.demo-control-checkbox--disabled {
+  color: grey;
+}
