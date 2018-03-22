@@ -6,6 +6,7 @@
 
 $mdc-theme-primary: #33333D;
 $mdc-theme-background: #33333D;
+$mdc-theme-text-primary-on-dark: white;
 @import "@material/theme/mdc-theme";
 @import "@material/typography/mdc-typography";
 @import "@material/elevation/mdc-elevation";
@@ -19,9 +20,14 @@ body {
   margin: 0;
   padding-top: 0.1px; // Prevent header h1 margin from pushing body down
   background-color: #33333D;
+  color: white;
 }
 
 // Login page styles
+
+.shrine-login {
+  background-color: #33333D;
+}
 
 .header {
   text-align: center;
@@ -31,10 +37,23 @@ body {
   width: 150px;
   height: 150px;
   padding: 80px;
+  fill: currentColor;
 }
 
 .username,
 .password {
+  @include mdc-text-field-ink-color(white);
+  &:not(.mdc-text-field--invalid) {
+    @include mdc-text-field-label-color(white);
+    @include mdc-text-field-line-ripple-color(#FFCF44);
+    @include mdc-text-field-focused-outline-color(#FFCF44);
+    @include mdc-text-field-bottom-line-color(rgba(255, 255, 255, .6));
+    @include mdc-text-field-hover-bottom-line-color(rgba(255, 255, 255, 1));
+  }
+  &.mdc-text-field--focused:not(.mdc-text-field--invalid)  {
+    @include mdc-text-field-label-color(#FFCF44);
+  }
+
   display: block;
   width: 300px;
   margin: 20px auto;
@@ -45,6 +64,10 @@ body {
   justify-content: flex-end;
   width: 300px;
   margin: auto;
+}
+
+.cancel {
+  @include mdc-button-ink-color(white);
 }
 
 // Home page styles
