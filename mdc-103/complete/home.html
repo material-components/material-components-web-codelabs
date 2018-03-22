@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Shrine (MDC Web Example App)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" sizes="192x192" href="https://material.io/static/images/simple-lp/favicons/components-192x192.png">
+  <link rel="shortcut icon" href="https://material.io/static/images/simple-lp/favicons/components-72x72.png">
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="bundle.css">
+</head>
+<body class="home">
+  <nav id="shrine-nav-drawer" class="mdc-drawer mdc-drawer--permanent">
+    <svg class="shrine-logo-drawer" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="48px" height="48px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve" fill="#000000">
+      <g id="XMLID_2_">
+      	<g id="XMLID_4_">
+      		<path id="XMLID_5_" d="M17,2H7L2,6.62L12,22L22,6.62L17,2z M16.5,3.58l3.16,2.92H16.5V3.58z M7.59,3.5H15v3H4.34L7.59,3.5z     M11.25,18.1L7.94,13h3.31V18.1z M11.25,11.5H6.96L4.69,8h6.56V11.5z M16.5,12.32 M12.75,18.09V8h6.56L12.75,18.09z"/>
+      	</g>
+      	<rect id="XMLID_1_" fill="none" width="24" height="24"/>
+      </g>
+    </svg>
+    <h1 class="shrine-title">SHRINE</h1>
+    <div class="mdc-drawer__content">
+      <nav class="mdc-list">
+        <a class="mdc-list-item mdc-list-item--activated" href="#">
+          Featured
+        </a>
+        <li class="shrine-select-item-divider mdc-list-divider" role="separator"></li>
+        <a class="mdc-list-item" href="#">
+          Apartment
+        </a>
+        <a class="mdc-list-item" href="#">
+          Accessories
+        </a>
+        <a class="mdc-list-item" href="#">
+          Shoes
+        </a>
+        <a class="mdc-list-item" href="#">
+          Tops
+        </a>
+        <a class="mdc-list-item" href="#">
+          Bottoms
+        </a>
+        <a class="mdc-list-item" href="#">
+          Dresses
+        </a>
+        <a class="mdc-list-item" href="#">
+          My Account
+        </a>
+      </nav>
+      <i class="material-icons shrine-search-icon">search</i>
+    </div>
+  </nav>
+  <div class="shrine-body">
+    <ul class="mdc-image-list mdc-image-list--masonry product-list">
+      <li class="mdc-image-list__item">
+        <img class="mdc-image-list__image" src="assets/backpack.png">
+        <div class="mdc-image-list__supporting">
+          <span class="mdc-image-list__label">Backpack</span>
+        </div>
+      </li>
+      <li class="mdc-image-list__item">
+        <img class="mdc-image-list__image" src="assets/beachball.png">
+        <div class="mdc-image-list__supporting">
+          <span class="mdc-image-list__label">Beach Ball</span>
+        </div>
+      </li>
+      <li class="mdc-image-list__item">
+        <img class="mdc-image-list__image" src="assets/binoculars.png">
+        <div class="mdc-image-list__supporting">
+          <span class="mdc-image-list__label">Binoculars</span>
+        </div>
+      </li>
+      <li class="mdc-image-list__item">
+        <img class="mdc-image-list__image" src="assets/brush.png">
+        <div class="mdc-image-list__supporting">
+          <span class="mdc-image-list__label">Brush</span>
+        </div>
+      </li>
+      <li class="mdc-image-list__item">
+        <img class="mdc-image-list__image" src="assets/chair.png">
+        <div class="mdc-image-list__supporting">
+          <span class="mdc-image-list__label">Chair</span>
+        </div>
+      </li>
+      <li class="mdc-image-list__item">
+        <img class="mdc-image-list__image" src="assets/chucks.png">
+        <div class="mdc-image-list__supporting">
+          <span class="mdc-image-list__label">Chucks</span>
+        </div>
+      </li>
+      <li class="mdc-image-list__item">
+        <img class="mdc-image-list__image" src="assets/clock.png">
+        <div class="mdc-image-list__supporting">
+          <span class="mdc-image-list__label">Clock</span>
+        </div>
+      </li>
+      <li class="mdc-image-list__item">
+        <img class="mdc-image-list__image" src="assets/fishbowl.png">
+        <div class="mdc-image-list__supporting">
+          <span class="mdc-image-list__label">Fish Bowl</span>
+        </div>
+      </li>
+      <li class="mdc-image-list__item">
+        <img class="mdc-image-list__image" src="assets/flippers.png">
+        <div class="mdc-image-list__supporting">
+          <span class="mdc-image-list__label">Flippers</span>
+        </div>
+      </li>
+      <li class="mdc-image-list__item">
+        <img class="mdc-image-list__image" src="assets/heels.png">
+        <div class="mdc-image-list__supporting">
+          <span class="mdc-image-list__label">Heels</span>
+        </div>
+      </li>
+      <li class="mdc-image-list__item">
+        <img class="mdc-image-list__image" src="assets/helmet.png">
+        <div class="mdc-image-list__supporting">
+          <span class="mdc-image-list__label">Helmet</span>
+        </div>
+      </li>
+      <li class="mdc-image-list__item">
+        <img class="mdc-image-list__image" src="assets/lamp.png">
+        <div class="mdc-image-list__supporting">
+          <span class="mdc-image-list__label">Lamp</span>
+        </div>
+      </li>
+      <li class="mdc-image-list__item">
+        <img class="mdc-image-list__image" src="assets/lawnchair.png">
+        <div class="mdc-image-list__supporting">
+          <span class="mdc-image-list__label">Lawnchair</span>
+        </div>
+      </li>
+      <li class="mdc-image-list__item">
+        <img class="mdc-image-list__image" src="assets/lipstick.png">
+        <div class="mdc-image-list__supporting">
+          <span class="mdc-image-list__label">Lipstick</span>
+        </div>
+      </li>
+      <li class="mdc-image-list__item">
+        <img class="mdc-image-list__image" src="assets/pen.png">
+        <div class="mdc-image-list__supporting">
+          <span class="mdc-image-list__label">Pen</span>
+        </div>
+      </li>
+      <li class="mdc-image-list__item">
+        <img class="mdc-image-list__image" src="assets/popsicle.png">
+        <div class="mdc-image-list__supporting">
+          <span class="mdc-image-list__label">Popsicle</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>
