@@ -24,6 +24,7 @@ body {
   width: 150px;
   height: 150px;
   padding: 80px;
+  fill: currentColor;
 }
 
 .username,
@@ -34,8 +35,9 @@ body {
 }
 
 .button-container {
+  display: flex;
+  justify-content: flex-end;
   width: 300px;
-  text-align: end;
   margin: auto;
 }
 
@@ -49,4 +51,32 @@ body {
   @include mdc-image-list-standard-columns(4);
 
   overflow: auto;
+}
+
+.shrine-select-item-divider {
+  width: 50px;
+  margin: 0 auto;
+  border-bottom-width: 2px;
+  position: relative;
+  top: -5px;
+}
+
+.shrine-search-icon {
+  display: block;
+  margin: 130px auto 0;
+  padding: 12px;
+  width: 24px;
+  height: 24px;
+}
+
+.shrine-logo-drawer {
+  width: 48px;
+  padding: 40px 0 0;
+  margin: 0 auto;
+  fill: currentColor;
+}
+
+.shrine-title {
+  align-self: center;
+  margin-top: 0;
 }

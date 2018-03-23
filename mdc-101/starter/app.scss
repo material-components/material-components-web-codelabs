@@ -18,10 +18,39 @@ body {
   width: 150px;
   height: 150px;
   padding: 80px;
+  fill: currentColor;
 }
 
 // Home page styles
 
 .home {
   display: flex; // Flexbox is used to easily arrange the persistent drawer and content side-by-side
+}
+
+.shrine-logo-drawer {
+  width: 48px;
+  padding: 40px 0 0;
+  margin: 0 auto;
+  fill: currentColor;
+}
+
+.shrine-title {
+  align-self: center;
+  margin-top: 0;
+}
+
+.shrine-select-item-divider {
+  width: 50px;
+  margin: 0 auto;
+  border-bottom-width: 2px;
+  position: relative;
+  top: -5px;
+}
+
+.shrine-search-icon {
+  display: block;
+  margin: 130px auto 0;
+  padding: 12px;
+  width: 24px;
+  height: 24px;
 }
