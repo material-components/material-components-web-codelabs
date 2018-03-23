@@ -1,0 +1,31 @@
+{
+  "name": "mdc-112-web",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "start": "webpack-dev-server"
+  },
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "babel-core": "^6.22.1",
+    "babel-loader": "^7.0.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.0",
+    "extract-loader": "^1.0.2",
+    "file-loader": "^1.1.11",
+    "node-sass": "^4.7.2",
+    "sass-loader": "^6.0.4",
+    "webpack": "^3.0.0",
+    "webpack-dev-server": "^2.4.3"
+  },
+  "dependencies": {
+    "@material/top-app-bar": "^0.33.0",
+    "@material/typography": "^0.28.0",
+    "classnames": "^2.2.5",
+    "prop-types": "^15.6.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  }
+}
