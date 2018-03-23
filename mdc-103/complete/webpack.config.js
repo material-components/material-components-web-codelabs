@@ -1,4 +1,4 @@
-module.exports = [
+module.exports = [ 
   {
     entry: './app.scss',
     output: {

@@ -4,12 +4,13 @@
 @import "@material/list/mdc-list";
 @import "@material/textfield/mdc-text-field";
 
-$mdc-theme-primary: #33333D;
-$mdc-theme-background: #33333D;
-$mdc-theme-text-primary-on-dark: white;
+$mdc-theme-primary: #FCB8AB;
+$mdc-theme-primary-light: #FFF0E9;
+$mdc-theme-primary-dark: #442C2E;
 @import "@material/theme/mdc-theme";
 @import "@material/typography/mdc-typography";
 @import "@material/elevation/mdc-elevation";
+
 
 html, body {
   height: 100%;
@@ -19,15 +20,9 @@ body {
   font-family: 'Roboto';
   margin: 0;
   padding-top: 0.1px; // Prevent header h1 margin from pushing body down
-  background-color: #33333D;
-  color: white;
 }
 
 // Login page styles
-
-.shrine-login {
-  background-color: #33333D;
-}
 
 .header {
   text-align: center;
@@ -42,16 +37,13 @@ body {
 
 .username,
 .password {
-  @include mdc-text-field-ink-color(white);
+  @include mdc-text-field-ink-color(#442C2E);
   &:not(.mdc-text-field--invalid) {
-    @include mdc-text-field-label-color(white);
-    @include mdc-text-field-line-ripple-color(#FFCF44);
-    @include mdc-text-field-focused-outline-color(#FFCF44);
-    @include mdc-text-field-bottom-line-color(rgba(255, 255, 255, .6));
-    @include mdc-text-field-hover-bottom-line-color(rgba(255, 255, 255, 1));
+    @include mdc-text-field-label-color(#442C2E);
+    @include mdc-text-field-line-ripple-color(#FCB8AB);
   }
   &.mdc-text-field--focused:not(.mdc-text-field--invalid)  {
-    @include mdc-text-field-label-color(#FFCF44);
+    @include mdc-text-field-label-color(#442C2E);
   }
 
   display: block;
@@ -66,9 +58,15 @@ body {
   margin: auto;
 }
 
-.cancel {
-  @include mdc-button-ink-color(white);
+.shrine-login {
+  @include mdc-theme-prop(background-color, primary-light);
+  @include mdc-theme-prop(color, primary-dark);
 }
+
+.cancel {
+  @include mdc-button-ink-color(primary-dark);
+}
+
 
 // Home page styles
 
@@ -79,8 +77,27 @@ body {
 .product-list {
   @include mdc-image-list-masonry-columns(4);
 
+
   padding: 80px 100px 0 100px;
   overflow: auto;
+}
+
+.shrine-select-item-divider {
+  @include mdc-theme-prop(border-bottom-color, #EAA4A4);
+
+  width: 50px;
+  margin: 0 auto;
+  border-bottom-width: 2px;
+  position: relative;
+  top: -5px;
+}
+
+.shrine-search-icon {
+  display: block;
+  margin: 130px auto 0;
+  padding: 12px;
+  width: 24px;
+  height: 24px;
 }
 
 .shrine-logo-drawer {
@@ -97,59 +114,40 @@ body {
   margin-top: 0;
 }
 
-#shrine-nav-drawer {
+.mdc-drawer {
+  @include mdc-drawer-fill-color-accessible(#FFDBCF);
+  @include mdc-drawer-ink-color(primary-dark);
+
   text-transform: uppercase;
-  @include mdc-drawer-fill-color-accessible(#33333D);
-  border-right-color: #33333D;
-}
 
-.mdc-list {
-  margin: 70px 5px auto 5px;
-}
+  .mdc-list-item {
+    @include mdc-list-item-primary-text-ink-color(rgba(0, 0, 0, .6));
 
-.mdc-list .mdc-list-item {
-  @include mdc-list-item-primary-text-ink-color(rgba(255, 255, 255, .6));
-  @include mdc-typography(body2);
+    border-radius: 6px;
+    justify-content: center;
+  }
 
-  border-radius: 6px;
-  justify-content: center;
-}
-
-.shrine-select-item-divider {
-  width: 50px;
-  margin: 0 auto;
-  border-bottom-width: 2px;
-  border-bottom-color: #FFCF44;
-  position: relative;
-  top: -5px;
-}
-
-.mdc-list .mdc-list-item--activated {
-  @include mdc-list-item-primary-text-ink-color(rgba(255, 255, 255, 1));
-}
-
-.shrine-search-icon {
-  display: block;
-  margin: 130px auto 0;
-  padding: 12px;
-  width: 24px;
-  height: 24px;
-  color: #FFCF44;
+  .mdc-list-item--activated {
+   @include mdc-list-item-primary-text-ink-color(rgba(0, 0, 0, 1));
+   @include mdc-states(rgba(0,0,0,0));
+  }
 }
 
 .mdc-image-list__supporting {
   justify-content: center;
 }
 
-.mdc-image-list__label {
-  @include mdc-typography(subheading2);
-}
-
 .mdc-image-list__item {
   padding: 10px;
 }
 
+.mdc-image-list__label {
+  @include mdc-typography(subheading2);
+}
+
 .shrine-body {
+  @include mdc-elevation(4);
+
   display: block;
   overflow: auto;
 }
