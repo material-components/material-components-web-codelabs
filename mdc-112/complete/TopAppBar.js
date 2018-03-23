@@ -1,12 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import {MDCTopAppBarFoundation, MDCShortTopAppBarFoundation, util} from '@material/top-app-bar';
 
 export default class TopAppBar extends React.Component {
 
   foundation_ = null;
-  adapter_ = null;
-  navIconInstance = null;
 
   state = {
     classList: new Set(),
@@ -28,23 +27,12 @@ export default class TopAppBar extends React.Component {
     });
   }
 
-  componentDidUpdate(prevProps, prevState) {
-    const shouldReinit =
-      prevProps.short !== this.props.short ||
-      prevProps.actionItems !== this.props.actionItems;
-
-    if (shouldReinit) {
-      this.foundation_.destroy();
-      this.setState({classList: new Set()});
-      this.initializeFoundation();
-    }
-  }
-
   componentDidMount() {
     this.initializeFoundation();
   }
 
   componentWillUnmount() {
+    // remember to always call destroy when the component is removed from the DOM.
     this.foundation_.destroy();
   }
 
@@ -79,14 +67,14 @@ export default class TopAppBar extends React.Component {
   render() {
     const {
       title,
-      navIcon: NavIcon
+      navIcon,
     } = this.props;
 
     return (
       <header className={this.classes}>
         <div className='mdc-top-app-bar__row'>
           <section className='mdc-top-app-bar__section mdc-top-app-bar__section--align-start'>
-            {NavIcon ? <NavIcon /> : null}
+            {navIcon ? navIcon : null}
             <span className="mdc-top-app-bar__title">
               {title}
             </span>
@@ -112,3 +100,21 @@ export default class TopAppBar extends React.Component {
   }
 
 }
+
+TopAppBar.propTypes = {
+  alwaysCollapsed: PropTypes.bool,
+  short: PropTypes.bool,
+  prominent: PropTypes.bool,
+  title: PropTypes.string,
+  actionItems: PropTypes.arrayOf(PropTypes.element),
+  navIcon: PropTypes.element,
+};
+
+TopAppBar.defaultProps = {
+  alwaysCollapsed: false,
+  short: false,
+  prominent: false,
+  title: '',
+  actionItems: null,
+  navIcon: null,
+};

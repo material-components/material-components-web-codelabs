@@ -9,6 +9,24 @@ export default class App extends React.Component {
     isProminent: false,
     isAlwaysCollapsed: false,
     noActionItems: false,
+    shouldReinit: false
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    console.log(prevState.isShort)
+    const shouldReinit =
+      prevState.isShort !== this.state.isShort ||
+      prevState.noActionItems !== this.state.noActionItems;
+
+    // This is a hack: this to teardown and remount the top app bar to
+    // show the different variants. No one should need to do this except
+    // in a demo page.
+    if (shouldReinit) {
+      this.setState({shouldReinit: true});
+      setTimeout(() => {
+        this.setState({shouldReinit: false});
+      });
+    }
   }
 
   get actionItems() {
@@ -32,20 +50,23 @@ export default class App extends React.Component {
   }
 
   render() {
-    const {isShort, isRtl, isProminent, isAlwaysCollapsed} = this.state;
+    const {isShort, isRtl, isProminent, isAlwaysCollapsed, shouldReinit} = this.state;
 
     return (
       <section
         dir={isRtl ? 'rtl' : 'ltr'}
         className='mdc-typography'>
-        <TopAppBar
-          navIcon={NavIcon}
-          short={isShort}
-          prominent={isProminent}
-          alwaysCollapsed={isAlwaysCollapsed}
-          title='Mountain View, CA'
-          actionItems={this.actionItems}
-        />
+        {
+          shouldReinit ? null :
+          <TopAppBar
+            navIcon={this.renderNavIcon()}
+            short={isShort}
+            prominent={isProminent}
+            alwaysCollapsed={isAlwaysCollapsed}
+            title='Mountain View, CA'
+            actionItems={this.actionItems}
+          />
+        }
         <div className='demo-text-container'>
           {this.renderDemoParagraphs()}
         </div>
@@ -121,15 +142,16 @@ export default class App extends React.Component {
       </div>
     );
   }
-}
 
-const NavIcon = () => {
-  return (
-    <a
-      className='material-icons mdc-top-app-bar__navigation-icon'
-      href='#'
-      onClick={() => {console.log('hey')}}>
-      menu
-    </a>
-  );
+  renderNavIcon() {
+    return (
+      <a
+        className='material-icons mdc-top-app-bar__navigation-icon'
+        href='#'
+        onClick={() => {console.log('hey')}}>
+        menu
+      </a>
+    );
+  }
+
 }

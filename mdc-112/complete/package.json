@@ -24,6 +24,7 @@
     "@material/top-app-bar": "^0.33.0",
     "@material/typography": "^0.28.0",
     "classnames": "^2.2.5",
+    "prop-types": "^15.6.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
   }
