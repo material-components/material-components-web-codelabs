@@ -115,6 +115,10 @@ body {
 
   text-transform: uppercase;
 
+  .mdc-list {
+    margin: 70px 5px auto 5px;
+  }
+
   .mdc-list-item {
     @include mdc-list-item-primary-text-ink-color(rgba(0, 0, 0, .6));
 
