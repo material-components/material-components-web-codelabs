@@ -54,6 +54,10 @@ body {
   margin: auto;
 }
 
+.button-container button {
+  margin: 3px;
+}
+
 .shrine-login {
   @include mdc-theme-prop(background-color, primary-light);
   @include mdc-theme-prop(color, primary-dark);
