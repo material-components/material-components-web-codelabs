@@ -59,8 +59,8 @@ body {
 }
 
 .shrine-login {
-  @include mdc-theme-prop(background-color, primary-light);
-  @include mdc-theme-prop(color, primary-dark);
+  background-color: $mdc-theme-primary-light;
+  color: $mdc-theme-primary-dark;
 }
 
 .cancel {
@@ -80,7 +80,7 @@ body {
 }
 
 .shrine-select-item-divider {
-  @include mdc-theme-prop(border-bottom-color, #EAA4A4);
+  border-bottom-color: #EAA4A4;
 
   width: 50px;
   margin: 0 auto;
