@@ -63,7 +63,7 @@ body {
 }
 
 .cancel {
-  @include mdc-button-ink-color(primary-dark);
+  @include mdc-button-ink-color($mdc-theme-primary-dark);
 }
 
 // Home page styles
@@ -114,7 +114,7 @@ body {
 
 .mdc-drawer {
   @include mdc-drawer-fill-color-accessible(#FFDBCF);
-  @include mdc-drawer-ink-color(primary-dark);
+  @include mdc-drawer-ink-color($mdc-theme-primary-dark);
 
   text-transform: uppercase;
 

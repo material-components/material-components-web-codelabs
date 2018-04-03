@@ -19,10 +19,10 @@
     "webpack-dev-server": "^2.4.3"
   },
   "dependencies": {
-    "@material/button": "^0.32.0",
+    "@material/button": "^0.34.0",
     "@material/drawer": "^0.33.0",
     "@material/image-list": "^0.33.0",
     "@material/list": "^0.33.0",
-    "@material/textfield": "^0.31.0"
+    "@material/textfield": "^0.34.0"
   }
 }
