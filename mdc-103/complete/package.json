@@ -25,7 +25,6 @@
     "@material/image-list": "^0.33.0",
     "@material/list": "^0.33.0",
     "@material/textfield": "^0.31.0",
-    "@material/theme": "^0.33.0",
     "@material/typography": "^0.28.0"
   }
 }
