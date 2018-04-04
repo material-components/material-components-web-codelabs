@@ -13,7 +13,7 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
   <link rel="stylesheet" href="bundle.css">
 </head>
-<body>
+<body class="shrine-login">
   <section class="header">
     <h1>SHRINE</h1>
     <svg class="shrine-logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="48px" height="48px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve" fill="#000000">
@@ -29,12 +29,12 @@
   <form action="home.html">
     <div class="mdc-text-field mdc-text-field--box username">
       <input type="text" class="mdc-text-field__input" id="username-input" name="username" required>
-      <label class="mdc-text-field__label" for="username-input">Username</label>
+      <label class="mdc-floating-label" for="username-input">Username</label>
       <div class="mdc-line-ripple"></div>
     </div>
     <div class="mdc-text-field mdc-text-field--box password">
       <input type="password" class="mdc-text-field__input" id="password-input" name="password" required minlength="8">
-      <label class="mdc-text-field__label" for="password-input">Password</label>
+      <label class="mdc-floating-label" for="password-input">Password</label>
       <div class="mdc-line-ripple"></div>
     </div>
     <div class="button-container">
