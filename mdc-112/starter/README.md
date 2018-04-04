@@ -1,6 +1,6 @@
 # MDC Codelab 112 - Integrating with Frameworks
 
-This repo compliments the codelab MDC 112.
+This repo complements the codelab MDC 112.
 
 ## Here are some brief definitions of the several files found in the repo:
 
