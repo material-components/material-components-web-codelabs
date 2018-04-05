@@ -128,11 +128,6 @@ body {
     border-radius: 6px;
     justify-content: center;
   }
-
-  .mdc-list-item--activated {
-   @include mdc-list-item-primary-text-ink-color(rgba(0, 0, 0, 1));
-   @include mdc-states(rgba(0,0,0,0));
-  }
 }
 
 .mdc-image-list__supporting {
