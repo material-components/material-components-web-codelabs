@@ -1,3 +1,4 @@
+$crane-primary-color: #5133a5;
 $crane-header-breakpoint: 54rem;
 $crane-main-max-width: 50rem;
 $crane-main-padding: 32px;
@@ -21,7 +22,7 @@ body {
   display: flex;
   align-items: center;
 
-  background-color: #5133a5;
+  background-color: $crane-primary-color;
   color: #fff;
   font-size: 1.2rem;
 
@@ -99,7 +100,7 @@ input[type="number"].crane-form-input {
 
 .crane-form-submit {
   width: 150px;
-  background-color: #5133a5;
+  background-color: $crane-primary-color;
   color: #fff;
   border: 0;
 }
