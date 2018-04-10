@@ -1,0 +1,24 @@
+@import "./variables";
+
+// Set the primary theme color *before* importing MDC component Sass
+$mdc-theme-primary: $crane-primary-color;
+
+@import "~@material/button/mdc-button";
+@import "~@material/ripple/mdc-ripple";
+@import "~@material/select/mdc-select";
+@import "~@material/textfield/mdc-text-field";
+
+.mdc-text-field {
+  display: flex;
+  margin: 0;
+}
+
+.mdc-text-field .mdc-text-field__input,
+.mdc-select .mdc-select__native-control {
+  font-size: 1rem;
+}
+
+.mdc-text-field .mdc-floating-label,
+.mdc-select .mdc-select__label {
+  font-size: .8rem;
+}

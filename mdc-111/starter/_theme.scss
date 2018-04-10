@@ -1,0 +1,25 @@
+@import "./variables";
+
+.crane-form-label {
+  text-transform: uppercase;
+  font-size: .8rem;
+}
+
+.crane-form-input {
+  display: block;
+  width: 100%;
+  height: 3rem;
+  margin-top: 8px;
+  font-size: 1.1rem;
+}
+
+.crane-form-input,
+.crane-form-submit {
+  padding: 12px;
+}
+
+.crane-form-submit {
+  background-color: $crane-primary-color;
+  color: #fff;
+  border: 0;
+}
