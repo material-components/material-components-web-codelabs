@@ -13,7 +13,6 @@ module.exports = [
         test: /\.scss$/,
         use: [
           {
-            // TODO(acdvorak): Why can't we use `file-loader` in MDC?
             loader: 'file-loader',
             options: {
               name: 'bundle.css',
@@ -31,7 +30,6 @@ module.exports = [
           {
             loader: 'sass-loader',
             options: {
-              // TODO(acdvorak): Update other codelabs (and MDC docs) to use `includePaths` instead of `importer`
               includePaths: ['./node_modules'],
             }
           },
