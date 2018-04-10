@@ -58,9 +58,6 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
-
-  text-transform: uppercase;
-  font-size: .8rem;
 }
 
 .crane-form-label + .crane-form-label {
@@ -70,14 +67,6 @@ body {
     margin-left: 0;
     margin-top: $crane-form-row-margin;
   }
-}
-
-.crane-form-input {
-  display: block;
-  width: 100%;
-  height: 3rem;
-  margin-top: 8px;
-  font-size: 1.1rem;
 }
 
 // Hide the number spinner
@@ -93,13 +82,33 @@ body {
   }
 }
 
+.crane-form-submit {
+  width: 150px;
+}
+
+//
+// Theme customizations
+//
+
+.crane-form-label {
+  text-transform: uppercase;
+  font-size: .8rem;
+}
+
+.crane-form-input {
+  display: block;
+  width: 100%;
+  height: 3rem;
+  margin-top: 8px;
+  font-size: 1.1rem;
+}
+
 .crane-form-input,
 .crane-form-submit {
   padding: 12px;
 }
 
 .crane-form-submit {
-  width: 150px;
   background-color: $crane-primary-color;
   color: #fff;
   border: 0;

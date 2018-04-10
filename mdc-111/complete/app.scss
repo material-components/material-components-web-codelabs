@@ -1,10 +1,4 @@
-$mdc-theme-primary: #5133a5;
-
-@import "~@material/button/mdc-button";
-@import "~@material/ripple/mdc-ripple";
-@import "~@material/select/mdc-select";
-@import "~@material/textfield/mdc-text-field";
-
+$crane-primary-color: #5133a5;
 $crane-header-breakpoint: 54rem;
 $crane-main-max-width: 50rem;
 $crane-main-padding: 32px;
@@ -28,7 +22,7 @@ body {
   display: flex;
   align-items: center;
 
-  background-color: $mdc-theme-primary;
+  background-color: $crane-primary-color;
   color: #fff;
   font-size: 1.2rem;
 
@@ -75,10 +69,6 @@ body {
   }
 }
 
-.crane-form-text-field {
-  display: flex;
-}
-
 // Hide the number spinner
 .crane-form-input[type="number"] {
   // Firefox
@@ -96,7 +86,18 @@ body {
   width: 150px;
 }
 
+//
+// Theme customizations
+//
+
+$mdc-theme-primary: $crane-primary-color;
+@import "~@material/button/mdc-button";
+@import "~@material/ripple/mdc-ripple";
+@import "~@material/select/mdc-select";
+@import "~@material/textfield/mdc-text-field";
+
 .mdc-text-field {
+  display: flex;
   margin: 0;
 }
 
