@@ -106,3 +106,13 @@ body {
 .mdc-text-field {
   margin: 0;
 }
+
+.mdc-text-field .mdc-text-field__input,
+.mdc-select .mdc-select__native-control {
+  font-size: 1rem;
+}
+
+.mdc-text-field .mdc-floating-label,
+.mdc-select .mdc-select__label {
+  font-size: .8rem;
+}
