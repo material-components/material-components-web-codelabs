@@ -22,6 +22,7 @@ function handleValidZipCode() {
 function handleInvalidZipCode() {
   zipCodeInput.setCustomValidity('Please enter a valid 5-digit ZIP code (e.g., 94043)');
 
+  // Force browsers to display the validation message bubble over the input
   setTimeout(() => {
     submitButton.click();
   });
