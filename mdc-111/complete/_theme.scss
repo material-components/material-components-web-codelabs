@@ -8,17 +8,16 @@ $mdc-theme-primary: $crane-primary-color;
 @import "~@material/select/mdc-select";
 @import "~@material/textfield/mdc-text-field";
 
-.mdc-text-field {
-  display: flex;
+.crane-text-field {
   margin: 0;
 }
 
-.mdc-text-field .mdc-text-field__input,
-.mdc-select .mdc-select__native-control {
+.crane-text-field .crane-text-field__input,
+.crane-select .crane-select__native-control {
   font-size: 1rem;
 }
 
-.mdc-text-field .mdc-floating-label,
-.mdc-select .mdc-select__label {
+.crane-text-field .crane-floating-label,
+.crane-select .crane-select__label {
   font-size: .8rem;
 }
