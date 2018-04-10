@@ -35,37 +35,37 @@ body {
   padding: 0 $crane-main-padding;
 }
 
-.crane-form-row {
+.crane-row {
   display: flex;
-  margin-bottom: $crane-form-row-margin;
+  margin-bottom: $crane-row-margin;
 
-  @media (max-width: $crane-form-row-breakpoint) {
+  @media (max-width: $crane-row-breakpoint) {
     flex-direction: column;
   }
 }
 
-.crane-form-row--submit {
+.crane-row--submit {
   flex-direction: row;
   justify-content: flex-end;
 }
 
-.crane-form-label {
+.crane-label {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 
-.crane-form-label + .crane-form-label {
+.crane-label + .crane-label {
   margin-left: 16px;
 
-  @media (max-width: $crane-form-row-breakpoint) {
+  @media (max-width: $crane-row-breakpoint) {
     margin-left: 0;
-    margin-top: $crane-form-row-margin;
+    margin-top: $crane-row-margin;
   }
 }
 
 // Hide the number spinner
-.crane-form-input[type="number"] {
+.crane-input[type="number"] {
   // Firefox
   appearance: textfield;
 
@@ -77,6 +77,6 @@ body {
   }
 }
 
-.crane-form-submit {
+.crane-submit {
   width: 150px;
 }

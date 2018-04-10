@@ -16,28 +16,28 @@
 
   <main class="crane-main">
     <form method="post" action="." id="crane-shipping-form">
-      <div class="crane-form-row">
-        <label class="crane-form-label">
+      <div class="crane-row">
+        <label class="crane-label">
           Name
-          <input class="crane-form-input" type="text" required autofocus>
+          <input class="crane-input" type="text" required autofocus>
         </label>
       </div>
-      <div class="crane-form-row">
-        <label class="crane-form-label">
+      <div class="crane-row">
+        <label class="crane-label">
           Address
-          <input class="crane-form-input" type="text" required>
+          <input class="crane-input" type="text" required>
         </label>
       </div>
-      <div class="crane-form-row">
-        <label class="crane-form-label">
+      <div class="crane-row">
+        <label class="crane-label">
           City
-          <input class="crane-form-input" type="text" required>
+          <input class="crane-input" type="text" required>
         </label>
       </div>
-      <div class="crane-form-row">
-        <label class="crane-form-label">
+      <div class="crane-row">
+        <label class="crane-label">
           State
-          <select class="crane-form-input" required>
+          <select class="crane-input" required>
             <option value="" selected></option>
             <option value="AL">Alabama</option>
             <option value="AK">Alaska</option>
@@ -92,19 +92,19 @@
             <option value="WY">Wyoming</option>
           </select>
         </label>
-        <label class="crane-form-label">
+        <label class="crane-label">
           ZIP Code
           <!--
             Note: `pattern="[0-9]*"` causes iPhone Safari to display a large numeric keyboard without decimal points.
             All other browsers (including iPad Safari) ignore the `pattern` attribute on `<input type="number">` elements.
             See https://www.filamentgroup.com/lab/type-number.html
           -->
-          <input class="crane-form-input" id="crane-zip-code-input"
+          <input class="crane-input" id="crane-zip-code-input"
                  type="number" required pattern="[0-9]*">
         </label>
       </div>
-      <div class="crane-form-row crane-form-row--submit">
-        <button type="submit" class="crane-form-submit" id="crane-submit-button">Save</button>
+      <div class="crane-row crane-row--submit">
+        <button type="submit" class="crane-submit" id="crane-submit-button">Save</button>
       </div>
     </form>
   </main>

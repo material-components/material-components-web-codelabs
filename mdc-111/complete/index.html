@@ -17,11 +17,11 @@
 
   <main class="crane-main">
     <form method="post" action="." id="crane-shipping-form">
-      <div class="crane-form-row">
-        <div class="crane-form-label">
+      <div class="crane-row">
+        <div class="crane-label">
           <div class="crane-text-field mdc-text-field mdc-text-field--box">
             <input type="text" id="crane-name-input" class="crane-text-field__input mdc-text-field__input"
-                   aria-controls="crane-form-name-helper-text"
+                   aria-controls="crane-name-helper-text"
                    required autofocus>
             <!-- TODO(acdvorak): Set `.mdc-floating-label` to `font-family: Roboto` -->
             <label for="crane-name-input" class="crane-floating-label mdc-floating-label">Name</label>
@@ -34,11 +34,11 @@
           </p>
         </div>
       </div>
-      <div class="crane-form-row">
-        <div class="crane-form-label">
+      <div class="crane-row">
+        <div class="crane-label">
           <div class="crane-text-field mdc-text-field mdc-text-field--box">
             <input type="text" id="crane-address-input" class="crane-text-field__input mdc-text-field__input"
-                   aria-controls="crane-form-address-helper-text"
+                   aria-controls="crane-address-helper-text"
                    required>
             <label for="crane-address-input" class="crane-floating-label mdc-floating-label">Address</label>
             <div class="mdc-line-ripple"></div>
@@ -50,11 +50,11 @@
           </p>
         </div>
       </div>
-      <div class="crane-form-row">
-        <div class="crane-form-label">
+      <div class="crane-row">
+        <div class="crane-label">
           <div class="crane-text-field mdc-text-field mdc-text-field--box">
             <input type="text" id="crane-city-input" class="crane-text-field__input mdc-text-field__input"
-                   aria-controls="crane-form-city-helper-text"
+                   aria-controls="crane-city-helper-text"
                    required>
             <label for="crane-city-input" class="crane-floating-label mdc-floating-label">City</label>
             <div class="mdc-line-ripple"></div>
@@ -66,8 +66,8 @@
           </p>
         </div>
       </div>
-      <div class="crane-form-row">
-        <div class="crane-form-label">
+      <div class="crane-row">
+        <div class="crane-label">
           <div class="crane-select mdc-select mdc-select--box">
             <select class="crane-select__native-control mdc-select__native-control" required>
               <option value="" selected></option>
@@ -127,16 +127,16 @@
             <div class="mdc-select__bottom-line"></div>
           </div>
         </div>
-        <div class="crane-form-label">
+        <div class="crane-label">
           <div class="crane-text-field mdc-text-field mdc-text-field--box">
             <!--
               Note: `pattern="[0-9]*"` causes iPhone Safari to display a large numeric keyboard without decimal points.
               All other browsers (including iPad Safari) ignore the `pattern` attribute on `<input type="number">` elements.
               See https://www.filamentgroup.com/lab/type-number.html
             -->
-            <input class="crane-form-input mdc-text-field__input" id="crane-zip-code-input"
+            <input class="crane-input mdc-text-field__input" id="crane-zip-code-input"
                    type="number" required pattern="[0-9]*"
-                   aria-controls="crane-form-zip-code-helper-text">
+                   aria-controls="crane-zip-code-helper-text">
             <label for="crane-zip-code-input" class="crane-floating-label mdc-floating-label">ZIP Code</label>
             <div class="mdc-line-ripple"></div>
           </div>
@@ -147,9 +147,8 @@
           </p>
         </div>
       </div>
-      <div class="crane-form-row crane-form-row--submit">
-        <button type="submit" class="crane-form-submit mdc-button mdc-button--raised"
-                id="crane-submit-button">
+      <div class="crane-row crane-row--submit">
+        <button type="submit" class="crane-submit mdc-button mdc-button--raised" id="crane-submit-button">
           Save
         </button>
       </div>
