@@ -5,7 +5,6 @@ $mdc-theme-primary: #5133a5;
 @import "~@material/select/mdc-select";
 @import "~@material/textfield/mdc-text-field";
 
-$crane-primary-color: $mdc-theme-primary;
 $crane-header-breakpoint: 54rem;
 $crane-main-max-width: 50rem;
 $crane-main-padding: 32px;
@@ -29,7 +28,7 @@ body {
   display: flex;
   align-items: center;
 
-  background-color: $crane-primary-color;
+  background-color: $mdc-theme-primary;
   color: #fff;
   font-size: 1.2rem;
 
@@ -65,7 +64,6 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
-  font-size: .8rem;
 }
 
 .crane-form-label + .crane-form-label {
@@ -97,11 +95,6 @@ body {
 .crane-form-submit {
   width: 150px;
 }
-
-
-
-
-
 
 .mdc-text-field {
   margin: 0;
