@@ -1,8 +1,9 @@
 @import "./variables";
 
-// Set the primary theme color *before* importing MDC component Sass
+// Set the primary theme color *before* importing MDC components
 $mdc-theme-primary: $crane-primary-color;
 
+// MDC components read the value of $mdc-theme-primary
 @import "~@material/button/mdc-button";
 @import "~@material/ripple/mdc-ripple";
 @import "~@material/select/mdc-select";
