@@ -85,8 +85,10 @@ body {
   font-size: 1.1rem;
 }
 
+// TODO(acdvorak): Is it even a good idea to use type="number"?
+// It prevents letters from being typed, but the up/down arrows change the value
 // Hide the number spinner
-input[type="number"].crane-form-input {
+input[type="number"].crane-form-zip-code-input {
   // Firefox
   appearance: textfield;
 
