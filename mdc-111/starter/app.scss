@@ -81,7 +81,7 @@ body {
 }
 
 // Hide the number spinner
-input[type="number"].crane-form-input {
+.crane-form-input[type="number"] {
   // Firefox
   appearance: textfield;
 
