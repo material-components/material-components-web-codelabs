@@ -1,5 +1,6 @@
 const shippingForm = document.querySelector('#crane-shipping-form');
 const zipCodeInput = document.querySelector('#crane-zip-code-input');
+const submitButton = document.querySelector('#crane-submit-button');
 
 shippingForm.addEventListener('submit', (evt) => {
   evt.preventDefault();
@@ -14,6 +15,7 @@ shippingForm.addEventListener('submit', (evt) => {
 zipCodeInput.addEventListener('input', hideZipCodeValidationMessage);
 
 function handleValidZipCode() {
+  hideZipCodeValidationMessage();
   alert('Success!');
 }
 
@@ -21,9 +23,7 @@ function handleInvalidZipCode() {
   zipCodeInput.setCustomValidity('Please enter a valid 5-digit ZIP code (e.g., 94043)');
 
   setTimeout(() => {
-    // TODO(acdvorak): Which browsers do we support?
-    // Cross-browser alternative (less elegant): https://stackoverflow.com/a/11867013/467582
-    shippingForm.reportValidity();
+    submitButton.click();
   });
 }
 
