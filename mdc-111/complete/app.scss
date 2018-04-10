@@ -77,18 +77,12 @@ body {
   }
 }
 
-.crane-form-input {
-  display: block;
-  width: 100%;
-  height: 3rem;
-  margin-top: 8px;
-  font-size: 1.1rem;
+.crane-form-text-field {
+  display: flex;
 }
 
-// TODO(acdvorak): Is it even a good idea to use type="number"?
-// It prevents letters from being typed, but the up/down arrows change the value
 // Hide the number spinner
-input[type="number"].crane-form-zip-code-input {
+.crane-form-input[type="number"] {
   // Firefox
   appearance: textfield;
 
@@ -108,9 +102,6 @@ input[type="number"].crane-form-zip-code-input {
 
 
 
-.crane-form-text-field {
-  display: flex;
-}
 
 .mdc-text-field {
   margin: 0;

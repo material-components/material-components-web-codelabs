@@ -2,25 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-
-  <!-- TODO(acdvorak): Are these the right values? -->
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <title>Shipping Address</title>
-
-  <!-- TODO(acdvorak): Is this the right icon? -->
   <link rel="icon" sizes="192x192" href="https://material.io/static/images/simple-lp/favicons/components-192x192.png">
   <link rel="shortcut icon" href="https://material.io/static/images/simple-lp/favicons/components-72x72.png">
-
-  <!-- TODO(acdvorak): Update other codelabs to use Normalize v8.0.0 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700">
-
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
   <link rel="stylesheet" href="bundle.css">
 </head>
 <body>
-  <!-- TODO(acdvorak): Update other codelabs to use semantic markup -->
   <header class="crane-header">
     Shipping Address
   </header>
@@ -140,13 +130,13 @@
         <div class="crane-form-label">
           <div class="crane-form-text-field mdc-text-field mdc-text-field--box">
             <!--
-            Note: `pattern="[0-9]*"` causes iPhone Safari to display a large numeric keyboard without decimal points.
-            All other browsers (including iPad Safari) ignore the `pattern` attribute on `<input type="number">` elements.
-            See https://www.filamentgroup.com/lab/type-number.html
+              Note: `pattern="[0-9]*"` causes iPhone Safari to display a large numeric keyboard without decimal points.
+              All other browsers (including iPad Safari) ignore the `pattern` attribute on `<input type="number">` elements.
+              See https://www.filamentgroup.com/lab/type-number.html
             -->
-            <input type="number" id="crane-zip-code-input" class="crane-form-zip-code-input mdc-text-field__input"
-                   aria-controls="crane-form-zip-code-helper-text"
-                   required pattern="[0-9]*">
+            <input class="crane-form-input mdc-text-field__input" id="crane-zip-code-input"
+                   type="number" required pattern="[0-9]*"
+                   aria-controls="crane-form-zip-code-helper-text">
             <label for="crane-zip-code-input" class="mdc-floating-label">ZIP Code</label>
             <div class="mdc-line-ripple"></div>
           </div>
