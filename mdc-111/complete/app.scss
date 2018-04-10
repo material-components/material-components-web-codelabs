@@ -1,0 +1,115 @@
+$mdc-theme-primary: #5133a5;
+
+@import "~@material/button/mdc-button";
+@import "~@material/ripple/mdc-ripple";
+@import "~@material/select/mdc-select";
+@import "~@material/textfield/mdc-text-field";
+
+$crane-primary-color: $mdc-theme-primary;
+$crane-header-breakpoint: 54rem;
+$crane-main-max-width: 50rem;
+$crane-main-padding: 32px;
+$crane-form-row-breakpoint: 35rem;
+$crane-form-row-margin: 24px;
+
+// Apply a natural box layout model to all elements, but allowing components to change.
+// https://www.paulirish.com/2012/box-sizing-border-box-ftw/
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.crane-header {
+  display: flex;
+  align-items: center;
+
+  background-color: $crane-primary-color;
+  color: #fff;
+  font-size: 1.2rem;
+
+  height: 4rem;
+  padding-left: $crane-main-padding * 2;
+
+  @media (max-width: $crane-header-breakpoint) {
+    padding-left: $crane-main-padding;
+  }
+}
+
+.crane-main {
+  max-width: $crane-main-max-width;
+  margin: $crane-main-padding auto;
+  padding: 0 $crane-main-padding;
+}
+
+.crane-form-row {
+  display: flex;
+  margin-bottom: $crane-form-row-margin;
+
+  @media (max-width: $crane-form-row-breakpoint) {
+    flex-direction: column;
+  }
+}
+
+.crane-form-row--submit {
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.crane-form-label {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-size: .8rem;
+}
+
+.crane-form-label + .crane-form-label {
+  margin-left: 16px;
+
+  @media (max-width: $crane-form-row-breakpoint) {
+    margin-left: 0;
+    margin-top: $crane-form-row-margin;
+  }
+}
+
+.crane-form-input {
+  display: block;
+  width: 100%;
+  height: 3rem;
+  margin-top: 8px;
+  font-size: 1.1rem;
+}
+
+// Hide the number spinner
+input[type="number"].crane-form-input {
+  // Firefox
+  appearance: textfield;
+
+  // Chrome
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+    appearance: none;
+    margin: 0;
+  }
+}
+
+.crane-form-submit {
+  width: 150px;
+}
+
+
+
+
+
+.crane-form-text-field {
+  display: flex;
+}
+
+.mdc-text-field {
+  margin: 0;
+}
