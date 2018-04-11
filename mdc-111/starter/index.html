@@ -18,33 +18,30 @@
     <form method="post" action="." id="crane-shipping-form">
       <div class="crane-row">
         <div class="crane-field">
+          <input class="crane-input" id="crane-name-input" type="text" required>
           <label class="crane-label" for="crane-name-input">
             Name
           </label>
-          <input class="crane-input" id="crane-name-input" type="text" required autofocus>
         </div>
       </div>
       <div class="crane-row">
         <div class="crane-field">
+          <input class="crane-input" id="crane-address-input" type="text" required>
           <label class="crane-label" for="crane-address-input">
             Address
           </label>
-          <input class="crane-input" id="crane-address-input" type="text" required>
         </div>
       </div>
       <div class="crane-row">
         <div class="crane-field">
+          <input class="crane-input" id="crane-city-input" type="text" required>
           <label class="crane-label" for="crane-city-input">
             City
           </label>
-          <input class="crane-input" id="crane-city-input" type="text" required>
         </div>
       </div>
       <div class="crane-row">
         <div class="crane-field">
-          <label class="crane-label" for="crane-state-input">
-            State
-          </label>
           <select class="crane-input" id="crane-state-input" required>
             <option value="" selected></option>
             <option value="AL">Alabama</option>
@@ -99,17 +96,20 @@
             <option value="WI">Wisconsin</option>
             <option value="WY">Wyoming</option>
           </select>
+          <label class="crane-label" for="crane-state-input">
+            State
+          </label>
         </div>
         <div class="crane-field">
-          <label class="crane-label" for="crane-zip-code-input">
-            ZIP Code
-          </label>
           <!--
             Note: `pattern="[0-9]*"` tells Safari on iPhone to display a large numeric keypad without decimal points.
             See https://www.filamentgroup.com/lab/type-number.html
           -->
           <input class="crane-input" id="crane-zip-code-input"
                  type="text" required minlength="5" maxlength="5" pattern="[0-9]*">
+          <label class="crane-label" for="crane-zip-code-input">
+            ZIP Code
+          </label>
         </div>
       </div>
       <div class="crane-row crane-row--submit">
