@@ -3,10 +3,9 @@
 // Set the primary theme color *before* importing any MDC components.
 $mdc-theme-primary: $crane-primary-color;
 
-@import "~@material/button/mdc-button";
-@import "~@material/ripple/mdc-ripple";
-@import "~@material/select/mdc-select";
-@import "~@material/textfield/mdc-text-field";
+@import "@material/button/mdc-button";
+@import "@material/select/mdc-select";
+@import "@material/textfield/mdc-text-field";
 
 .crane-text-field {
   margin: 0;
