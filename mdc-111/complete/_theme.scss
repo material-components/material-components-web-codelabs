@@ -13,6 +13,17 @@ $mdc-theme-primary: $crane-primary-color;
   margin: 0;
 }
 
+.crane-helper-text {
+  visibility: hidden;
+  min-height: 1rem;
+  margin: 8px 16px;
+}
+
+.crane-helper-text--showing {
+  visibility: visible;
+  opacity: 1;
+}
+
 .crane-text-field .crane-text-field__input,
 .crane-select .crane-select__native-control {
   font-size: 1rem;
@@ -21,4 +32,16 @@ $mdc-theme-primary: $crane-primary-color;
 .crane-text-field .crane-floating-label,
 .crane-select .crane-select__label {
   font-size: .8rem;
+}
+
+.crane-select--invalid {
+  @include mdc-select-label-color($mdc-text-field-error);
+  @include mdc-select-focused-label-color($mdc-text-field-error);
+  @include mdc-select-bottom-line-color($mdc-text-field-error);
+  @include mdc-select-focused-bottom-line-color($mdc-text-field-error);
+  @include mdc-text-field-helper-text-color(#999);
+}
+
+.mdc-text-field--invalid {
+  @include mdc-text-field-helper-text-color(#999);
 }

@@ -64,19 +64,6 @@ body {
   }
 }
 
-// Hide the number spinner
-.crane-input[type="number"] {
-  // Firefox
-  appearance: textfield;
-
-  // Chrome
-  &::-webkit-inner-spin-button,
-  &::-webkit-outer-spin-button {
-    appearance: none;
-    margin: 0;
-  }
-}
-
-.crane-submit {
+.crane-button--submit {
   width: 150px;
 }

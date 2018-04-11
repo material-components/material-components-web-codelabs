@@ -2,51 +2,65 @@ const MDCRipple = require('@material/ripple').MDCRipple;
 const MDCSelect = require('@material/select').MDCSelect;
 const MDCTextField = require('@material/textfield').MDCTextField;
 
-const buttonElements = [].slice.call(document.querySelectorAll('.mdc-button'));
-buttonElements.forEach((buttonEl) => {
-  MDCRipple.attachTo(buttonEl);
-});
-
-const selectElements = [].slice.call(document.querySelectorAll('.mdc-select'));
-selectElements.forEach((selectEl) => {
-  MDCSelect.attachTo(selectEl);
-});
-
-const textFieldElements = [].slice.call(document.querySelectorAll('.mdc-text-field'));
-textFieldElements.forEach((textFieldEl) => {
-  MDCTextField.attachTo(textFieldEl);
-});
-
 const shippingForm = document.querySelector('#crane-shipping-form');
-const zipCodeInput = document.querySelector('#crane-zip-code-input');
-const submitButton = document.querySelector('#crane-submit-button');
 
 shippingForm.addEventListener('submit', (evt) => {
   evt.preventDefault();
 
-  if (/^[0-9]{5}$/.test(zipCodeInput.value)) {
-    handleValidZipCode();
-  } else {
-    handleInvalidZipCode();
-  }
+  alert('Success!');
 });
 
-zipCodeInput.addEventListener('input', hideZipCodeValidationMessage);
+const buttonElements = [].slice.call(document.querySelectorAll('.crane-button'));
+buttonElements.forEach((buttonEl) => {
+  MDCRipple.attachTo(buttonEl);
+});
 
-function handleValidZipCode() {
-  hideZipCodeValidationMessage();
-  alert('Success!');
-}
+const selectElements = [].slice.call(document.querySelectorAll('.crane-select'));
+selectElements.forEach((selectEl) => {
+  MDCSelect.attachTo(selectEl);
+  const nativeEl = selectEl.querySelector('.crane-select__native-control');
 
-function handleInvalidZipCode() {
-  zipCodeInput.setCustomValidity('Please enter a valid 5-digit ZIP code (e.g., 94043)');
-
-  // Force browsers to display the validation message bubble over the input
-  setTimeout(() => {
-    submitButton.click();
+  ['input', 'blur'].forEach((eventName) => {
+    nativeEl.addEventListener(eventName, () => checkSelectValidity(selectEl));
   });
+
+  nativeEl.addEventListener('invalid', (evt) => evt.preventDefault());
+});
+
+const textFieldElements = [].slice.call(document.querySelectorAll('.crane-text-field'));
+textFieldElements.forEach((textFieldEl) => {
+  const tf = MDCTextField.attachTo(textFieldEl);
+  const nativeEl = textFieldEl.querySelector('.crane-text-field__input');
+
+  ['input', 'blur'].forEach((eventName) => {
+    nativeEl.addEventListener(eventName, () => checkTextFieldValidity(textFieldEl, tf));
+  });
+
+  nativeEl.addEventListener('invalid', (evt) => evt.preventDefault());
+});
+
+function checkSelectValidity(selectEl) {
+  const nativeEl = selectEl.querySelector('.crane-select__native-control');
+  const helperEl = selectEl.parentElement.querySelector('.crane-helper-text');
+
+  if (nativeEl.checkValidity()) {
+    selectEl.classList.remove('crane-select--invalid');
+    helperEl.classList.remove('crane-helper-text--showing');
+  } else {
+    selectEl.classList.add('crane-select--invalid');
+    helperEl.classList.add('crane-helper-text--showing');
+  }
 }
 
-function hideZipCodeValidationMessage() {
-  zipCodeInput.setCustomValidity('');
+function checkTextFieldValidity(textFieldEl, tf) {
+  const nativeEl = textFieldEl.querySelector('.crane-text-field__input');
+  const helperEl = textFieldEl.parentElement.querySelector('.crane-helper-text');
+
+  if (nativeEl.checkValidity()) {
+    helperEl.classList.remove('crane-helper-text--showing');
+    tf.valid = true;
+  } else {
+    helperEl.classList.add('crane-helper-text--showing');
+    tf.valid = false;
+  }
 }

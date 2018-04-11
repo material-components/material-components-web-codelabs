@@ -27,10 +27,9 @@
             <label for="crane-name-input" class="crane-floating-label mdc-floating-label">Name</label>
             <div class="mdc-line-ripple"></div>
           </div>
-          <p class="crane-text-field-helper-text mdc-text-field-helper-text"
-             id="crane-name-helper-text"
-             style="display: none;">
-            Helper Text (possibly validation message)
+          <p class="crane-helper-text mdc-text-field-helper-text"
+             id="crane-name-helper-text">
+            Please enter your name
           </p>
         </div>
       </div>
@@ -43,10 +42,9 @@
             <label for="crane-address-input" class="crane-floating-label mdc-floating-label">Address</label>
             <div class="mdc-line-ripple"></div>
           </div>
-          <p class="crane-text-field-helper-text mdc-text-field-helper-text"
-             id="crane-address-helper-text"
-             style="display: none;">
-            Helper Text (possibly validation message)
+          <p class="crane-helper-text mdc-text-field-helper-text"
+             id="crane-address-helper-text">
+            Please enter your street address
           </p>
         </div>
       </div>
@@ -59,17 +57,18 @@
             <label for="crane-city-input" class="crane-floating-label mdc-floating-label">City</label>
             <div class="mdc-line-ripple"></div>
           </div>
-          <p class="crane-text-field-helper-text mdc-text-field-helper-text"
-             id="crane-city-helper-text"
-             style="display: none;">
-            Helper Text (possibly validation message)
+          <p class="crane-helper-text mdc-text-field-helper-text"
+             id="crane-city-helper-text">
+            Please enter your city
           </p>
         </div>
       </div>
       <div class="crane-row">
         <div class="crane-label">
           <div class="crane-select mdc-select mdc-select--box">
-            <select class="crane-select__native-control mdc-select__native-control" required>
+            <select class="crane-select__native-control mdc-select__native-control" id="crane-state-input"
+                    required
+                    aria-controls="crane-state-helper-text">
               <option value="" selected></option>
               <option value="AL">Alabama</option>
               <option value="AK">Alaska</option>
@@ -123,9 +122,16 @@
               <option value="WI">Wisconsin</option>
               <option value="WY">Wyoming</option>
             </select>
-            <div class="crane-select__label mdc-select__label mdc-select__label--float-above">State</div>
+            <label class="crane-select__label mdc-select__label mdc-select__label--float-above"
+                   for="crane-state-input">
+              State
+            </label>
             <div class="mdc-select__bottom-line"></div>
           </div>
+          <p class="crane-helper-text mdc-text-field-helper-text"
+             id="crane-state-helper-text">
+            Helper Text (possibly validation message)
+          </p>
         </div>
         <div class="crane-label">
           <div class="crane-text-field mdc-text-field mdc-text-field--box">
@@ -134,21 +140,20 @@
               All other browsers (including iPad Safari) ignore the `pattern` attribute on `<input type="number">` elements.
               See https://www.filamentgroup.com/lab/type-number.html
             -->
-            <input class="crane-input mdc-text-field__input" id="crane-zip-code-input"
-                   type="number" required pattern="[0-9]*"
+            <input class="crane-text-field__input mdc-text-field__input" id="crane-zip-code-input"
+                   type="text" required maxlength="5" pattern="[0-9]{5}"
                    aria-controls="crane-zip-code-helper-text">
             <label for="crane-zip-code-input" class="crane-floating-label mdc-floating-label">ZIP Code</label>
             <div class="mdc-line-ripple"></div>
           </div>
-          <p class="crane-text-field-helper-text mdc-text-field-helper-text"
-             id="crane-zip-code-helper-text"
-             style="display: none;">
-            Helper Text (possibly validation message)
+          <p class="crane-helper-text mdc-text-field-helper-text"
+             id="crane-zip-code-helper-text">
+            Please enter your 5 digit ZIP code (e.g., 94043)
           </p>
         </div>
       </div>
       <div class="crane-row crane-row--submit">
-        <button type="submit" class="crane-submit mdc-button mdc-button--raised" id="crane-submit-button">
+        <button type="submit" class="crane-button crane-button--submit mdc-button mdc-button--raised" id="crane-submit-button">
           Save
         </button>
       </div>
