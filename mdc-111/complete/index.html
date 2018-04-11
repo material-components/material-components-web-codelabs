@@ -20,56 +20,44 @@
       <div class="crane-row">
         <div class="crane-label">
           <div class="crane-text-field mdc-text-field mdc-text-field--box">
-            <input type="text" id="crane-name-input" class="crane-text-field__input mdc-text-field__input"
-                   aria-controls="crane-name-helper-text"
-                   required autofocus>
-            <!-- TODO(acdvorak): Set `.mdc-floating-label` to `font-family: Roboto` -->
-            <label for="crane-name-input" class="crane-floating-label mdc-floating-label">Name</label>
+            <input class="crane-text-field__input mdc-text-field__input" id="crane-name-input"
+                   type="text" required autofocus>
+            <label for="crane-name-input" class="crane-floating-label mdc-floating-label">
+              Name
+            </label>
             <div class="mdc-line-ripple"></div>
           </div>
-          <p class="crane-text-field-helper-text mdc-text-field-helper-text"
-             id="crane-name-helper-text"
-             style="display: none;">
-            Helper Text (possibly validation message)
-          </p>
         </div>
       </div>
       <div class="crane-row">
         <div class="crane-label">
           <div class="crane-text-field mdc-text-field mdc-text-field--box">
-            <input type="text" id="crane-address-input" class="crane-text-field__input mdc-text-field__input"
-                   aria-controls="crane-address-helper-text"
-                   required>
-            <label for="crane-address-input" class="crane-floating-label mdc-floating-label">Address</label>
+            <input class="crane-text-field__input mdc-text-field__input" id="crane-address-input"
+                   type="text" required>
+            <label for="crane-address-input" class="crane-floating-label mdc-floating-label">
+              Address
+            </label>
             <div class="mdc-line-ripple"></div>
           </div>
-          <p class="crane-text-field-helper-text mdc-text-field-helper-text"
-             id="crane-address-helper-text"
-             style="display: none;">
-            Helper Text (possibly validation message)
-          </p>
         </div>
       </div>
       <div class="crane-row">
         <div class="crane-label">
           <div class="crane-text-field mdc-text-field mdc-text-field--box">
-            <input type="text" id="crane-city-input" class="crane-text-field__input mdc-text-field__input"
-                   aria-controls="crane-city-helper-text"
-                   required>
-            <label for="crane-city-input" class="crane-floating-label mdc-floating-label">City</label>
+            <input class="crane-text-field__input mdc-text-field__input" id="crane-city-input"
+                   type="text" required>
+            <label for="crane-city-input" class="crane-floating-label mdc-floating-label">
+              City
+            </label>
             <div class="mdc-line-ripple"></div>
           </div>
-          <p class="crane-text-field-helper-text mdc-text-field-helper-text"
-             id="crane-city-helper-text"
-             style="display: none;">
-            Helper Text (possibly validation message)
-          </p>
         </div>
       </div>
       <div class="crane-row">
         <div class="crane-label">
           <div class="crane-select mdc-select mdc-select--box">
-            <select class="crane-select__native-control mdc-select__native-control" required>
+            <select class="crane-select__native-control mdc-select__native-control" id="crane-state-input"
+                    required>
               <option value="" selected></option>
               <option value="AL">Alabama</option>
               <option value="AK">Alaska</option>
@@ -123,28 +111,26 @@
               <option value="WI">Wisconsin</option>
               <option value="WY">Wyoming</option>
             </select>
-            <div class="crane-select__label mdc-select__label mdc-select__label--float-above">State</div>
+            <label class="crane-select__label mdc-select__label mdc-select__label--float-above"
+                   for="crane-state-input">
+              State
+            </label>
             <div class="mdc-select__bottom-line"></div>
           </div>
         </div>
         <div class="crane-label">
           <div class="crane-text-field mdc-text-field mdc-text-field--box">
             <!--
-              Note: `pattern="[0-9]*"` causes iPhone Safari to display a large numeric keyboard without decimal points.
-              All other browsers (including iPad Safari) ignore the `pattern` attribute on `<input type="number">` elements.
+              Note: `pattern="[0-9]*"` tells Safari on iPhone to display a large numeric keypad without decimal points.
               See https://www.filamentgroup.com/lab/type-number.html
             -->
             <input class="crane-input mdc-text-field__input" id="crane-zip-code-input"
-                   type="number" required pattern="[0-9]*"
-                   aria-controls="crane-zip-code-helper-text">
-            <label for="crane-zip-code-input" class="crane-floating-label mdc-floating-label">ZIP Code</label>
+                   type="text" required minlength="5" maxlength="5" pattern="[0-9]*">
+            <label for="crane-zip-code-input" class="crane-floating-label mdc-floating-label">
+              ZIP Code
+            </label>
             <div class="mdc-line-ripple"></div>
           </div>
-          <p class="crane-text-field-helper-text mdc-text-field-helper-text"
-             id="crane-zip-code-helper-text"
-             style="display: none;">
-            Helper Text (possibly validation message)
-          </p>
         </div>
       </div>
       <div class="crane-row crane-row--submit">

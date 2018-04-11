@@ -95,12 +95,11 @@
         <label class="crane-label">
           ZIP Code
           <!--
-            Note: `pattern="[0-9]*"` causes iPhone Safari to display a large numeric keyboard without decimal points.
-            All other browsers (including iPad Safari) ignore the `pattern` attribute on `<input type="number">` elements.
+            Note: `pattern="[0-9]*"` tells Safari on iPhone to display a large numeric keypad without decimal points.
             See https://www.filamentgroup.com/lab/type-number.html
           -->
           <input class="crane-input" id="crane-zip-code-input"
-                 type="number" required pattern="[0-9]*">
+                 type="text" required minlength="5" maxlength="5" pattern="[0-9]*">
         </label>
       </div>
       <div class="crane-row crane-row--submit">
