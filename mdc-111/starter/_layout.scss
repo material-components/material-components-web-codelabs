@@ -40,13 +40,13 @@ body {
   justify-content: flex-end;
 }
 
-.crane-label {
+.crane-field {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 
-.crane-label + .crane-label {
+.crane-field + .crane-field {
   margin-left: 16px;
 
   @media (max-width: $crane-row-breakpoint) {
