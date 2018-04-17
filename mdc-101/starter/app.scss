@@ -27,18 +27,6 @@ body {
   display: flex; // Flexbox is used to easily arrange the persistent drawer and content side-by-side
 }
 
-.shrine-logo-drawer {
-  width: 48px;
-  padding: 40px 0 0;
-  margin: 0 auto;
-  fill: currentColor;
-}
-
-.shrine-title {
-  align-self: center;
-  margin-top: 0;
-}
-
 .shrine-select-item-divider {
   width: 50px;
   margin: 0 auto;

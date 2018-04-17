@@ -58,6 +58,11 @@ body {
   fill: currentColor;
 }
 
+.shrine-title {
+  align-self: center;
+  margin: 5px auto;
+}
+
 .shrine-select-item-divider {
   width: 50px;
   margin: 0 auto;
@@ -72,11 +77,6 @@ body {
   padding: 12px;
   width: 24px;
   height: 24px;
-}
-
-.shrine-title {
-  align-self: center;
-  margin-top: 0;
 }
 
 .product-list {

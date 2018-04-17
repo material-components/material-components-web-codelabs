@@ -67,8 +67,25 @@ body {
 }
 
 // Home page styles
+
 .home {
   display: flex; // Flexbox is used to easily arrange the persistent drawer and content side-by-side
+}
+
+.shrine-logo-drawer {
+  @include mdc-text-field-ink-color(#442C2E);
+
+  width: 48px;
+  padding: 40px 0 0;
+  margin: 0 auto;
+  fill: currentColor;
+}
+
+.shrine-title {
+  @include mdc-typography(title);
+
+  align-self: center;
+  margin: 5px auto;
 }
 
 .product-list {
@@ -94,22 +111,6 @@ body {
   padding: 12px;
   width: 24px;
   height: 24px;
-}
-
-.shrine-logo-drawer {
-  @include mdc-text-field-ink-color(#442C2E);
-
-  width: 48px;
-  padding: 40px 0 0;
-  margin: 0 auto;
-  fill: currentColor;
-}
-
-.shrine-title {
-  @include mdc-typography(title);
-
-  align-self: center;
-  margin-top: 0;
 }
 
 .mdc-drawer {
