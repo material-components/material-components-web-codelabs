@@ -113,7 +113,7 @@ body {
   height: 24px;
 }
 
-.mdc-drawer {
+.shrine-drawer {
   @include mdc-drawer-fill-color-accessible(#FFDBCF);
   @include mdc-drawer-ink-color($mdc-theme-primary-dark);
 
