@@ -105,14 +105,6 @@ body {
   top: -5px;
 }
 
-.shrine-search-icon {
-  display: block;
-  margin: 130px auto 0;
-  padding: 12px;
-  width: 24px;
-  height: 24px;
-}
-
 .shrine-drawer {
   @include mdc-drawer-fill-color-accessible(#FFDBCF);
   @include mdc-drawer-ink-color($mdc-theme-primary-dark);

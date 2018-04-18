@@ -63,14 +63,6 @@ body {
   margin: 5px auto;
 }
 
-.shrine-search-icon {
-  display: block;
-  margin: 130px auto 0;
-  padding: 12px;
-  width: 24px;
-  height: 24px;
-}
-
 .product-list {
   @include mdc-image-list-standard-columns(4);
 
