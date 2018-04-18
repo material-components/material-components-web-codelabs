@@ -1,6 +1,7 @@
-$mdc-theme-primary: #FCB8AB;
-$mdc-theme-primary-light: #FFF0E9;
+$mdc-theme-primary: #FBB8AC;
+$mdc-theme-primary-light: #FEDBD0;
 $mdc-theme-primary-dark: #442C2E;
+$mdc-theme-secondary: #FEEAE6;
 @import "@material/button/mdc-button";
 @import "@material/drawer/mdc-drawer";
 @import "@material/image-list/mdc-image-list";
@@ -8,6 +9,7 @@ $mdc-theme-primary-dark: #442C2E;
 @import "@material/textfield/mdc-text-field";
 @import "@material/typography/mdc-typography";
 @import "@material/elevation/mdc-elevation";
+
 
 html, body {
   height: 100%;
@@ -20,6 +22,7 @@ body {
 }
 
 // Login page styles
+
 .header {
   text-align: center;
 }
@@ -33,12 +36,12 @@ body {
 
 .username,
 .password {
-  @include mdc-text-field-ink-color(#442C2E);
+  @include mdc-text-field-ink-color($mdc-theme-primary-dark);
   &:not(.mdc-text-field--invalid) {
-    @include mdc-text-field-label-color(#442C2E);
+    @include mdc-text-field-label-color($mdc-theme-primary-dark);
   }
   &.mdc-text-field--focused:not(.mdc-text-field--invalid)  {
-    @include mdc-text-field-label-color(#442C2E);
+    @include mdc-text-field-label-color($mdc-theme-primary-dark);
   }
 
   display: block;
@@ -58,13 +61,14 @@ body {
 }
 
 .shrine-login {
-  background-color: $mdc-theme-primary-light;
+  background-color: $mdc-theme-secondary;
   color: $mdc-theme-primary-dark;
 }
 
 .cancel {
   @include mdc-button-ink-color($mdc-theme-primary-dark);
 }
+
 
 // Home page styles
 
@@ -73,8 +77,6 @@ body {
 }
 
 .shrine-logo-drawer {
-  @include mdc-text-field-ink-color(#442C2E);
-
   width: 48px;
   padding: 40px 0 0;
   margin: 0 auto;
@@ -91,22 +93,13 @@ body {
 .product-list {
   @include mdc-image-list-masonry-columns(4);
 
+
   padding: 80px 100px 0 100px;
   overflow: auto;
 }
 
-.shrine-select-item-divider {
-  @include mdc-theme-prop(border-bottom-color, #EAA4A4);
-
-  width: 50px;
-  margin: 0 auto;
-  border-bottom-width: 2px;
-  position: relative;
-  top: -5px;
-}
-
 .shrine-drawer {
-  @include mdc-drawer-fill-color-accessible(#FFDBCF);
+  @include mdc-drawer-fill-color-accessible($mdc-theme-primary-light);
   @include mdc-drawer-ink-color($mdc-theme-primary-dark);
 
   text-transform: uppercase;
@@ -121,6 +114,16 @@ body {
     border-radius: 6px;
     justify-content: center;
   }
+}
+
+.shrine-select-item-divider {
+  @include mdc-theme-prop(border-bottom-color, #EAA4A4);
+
+  width: 50px;
+  margin: 0 auto;
+  border-bottom-width: 2px;
+  position: relative;
+  top: -5px;
 }
 
 .mdc-image-list__supporting {
