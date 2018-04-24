@@ -1,7 +1,12 @@
-$mdc-theme-primary: #FBB8AC;
-$mdc-theme-primary-light: #FEDBD0;
-$mdc-theme-primary-dark: #442C2E;
+$mdc-theme-primary: #FEDBD0;
+$mdc-theme-on-primary: #442C2E;
 $mdc-theme-secondary: #FEEAE6;
+$mdc-theme-on-secondary: #442C2E;
+$mdc-theme-surface: #FFFBFA;
+$mdc-theme-on-surface: #442C2E;
+$mdc-theme-background: #FFFFFF;
+$mdc-theme-on-background: #442C2E;
+
 @import "@material/button/mdc-button";
 @import "@material/drawer/mdc-drawer";
 @import "@material/image-list/mdc-image-list";
@@ -36,12 +41,11 @@ body {
 
 .username,
 .password {
-  @include mdc-text-field-ink-color($mdc-theme-primary-dark);
   &:not(.mdc-text-field--invalid) {
-    @include mdc-text-field-label-color($mdc-theme-primary-dark);
+     @include mdc-text-field-label-color(on-primary);
   }
   &.mdc-text-field--focused:not(.mdc-text-field--invalid)  {
-    @include mdc-text-field-label-color($mdc-theme-primary-dark);
+     @include mdc-text-field-label-color(on-primary);
   }
 
   display: block;
@@ -61,12 +65,12 @@ body {
 }
 
 .shrine-login {
-  background-color: $mdc-theme-secondary;
-  color: $mdc-theme-primary-dark;
+  background-color: $mdc-theme-background;
+  color: $mdc-theme-on-background;
 }
 
 .cancel {
-  @include mdc-button-ink-color($mdc-theme-primary-dark);
+  @include mdc-button-ink-color(on-primary);
 }
 
 
@@ -84,7 +88,7 @@ body {
 }
 
 .shrine-title {
-  @include mdc-typography(title);
+  @include mdc-typography(headline6);
 
   align-self: center;
   margin: 5px auto;
@@ -93,14 +97,13 @@ body {
 .product-list {
   @include mdc-image-list-masonry-columns(4);
 
-
   padding: 80px 100px 0 100px;
   overflow: auto;
 }
 
 .shrine-drawer {
-  @include mdc-drawer-fill-color-accessible($mdc-theme-primary-light);
-  @include mdc-drawer-ink-color($mdc-theme-primary-dark);
+  @include mdc-drawer-fill-color-accessible(primary);
+  @include mdc-drawer-ink-color(on-primary);
 
   text-transform: uppercase;
 
@@ -109,7 +112,7 @@ body {
   }
 
   .mdc-list-item {
-    @include mdc-list-item-primary-text-ink-color(rgba(0, 0, 0, .6));
+    @include mdc-list-item-primary-text-ink-color(on-primary);
 
     border-radius: 6px;
     justify-content: center;
@@ -135,7 +138,7 @@ body {
 }
 
 .mdc-image-list__label {
-  @include mdc-typography(subheading2);
+  @include mdc-typography(subtitle2);
 }
 
 .shrine-body {
