@@ -1,14 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import {MDCTopAppBarFoundation, MDCShortTopAppBarFoundation, util} from '@material/top-app-bar';
+import {MDCTopAppBarFoundation, MDCFixedTopAppBarFoundation, MDCShortTopAppBarFoundation} from '@material/top-app-bar';
 
 export default class TopAppBar extends React.Component {
 
   foundation_ = null;
 
+  constructor(props) {
+    super(props);
+    this.topAppBarElement = React.createRef();
+  }
+
   state = {
     classList: new Set(),
+    style: {},
   };
 
   get classes() {
@@ -17,10 +23,12 @@ export default class TopAppBar extends React.Component {
       alwaysCollapsed,
       className,
       short,
+      fixed,
       prominent,
     } = this.props;
 
     return classnames('mdc-top-app-bar', Array.from(classList), className, {
+      'mdc-top-app-bar--fixed': fixed,
       'mdc-top-app-bar--short': short,
       'mdc-top-app-bar--short-collapsed': alwaysCollapsed,
       'mdc-top-app-bar--prominent': prominent,
@@ -39,11 +47,25 @@ export default class TopAppBar extends React.Component {
   initializeFoundation = () => {
     if (this.props.short) {
       this.foundation_ = new MDCShortTopAppBarFoundation(this.adapter);
+    } else if(this.props.fixed) {
+      this.foundation_ = new MDCFixedTopAppBarFoundation(this.adapter);
     } else {
       this.foundation_ = new MDCTopAppBarFoundation(this.adapter);
     }
 
     this.foundation_.init();
+  }
+
+  setStyle = (varName, value) => {
+    const updatedStyle = Object.assign({}, this.state.style);
+    updatedStyle[varName] = value;
+    this.setState({style: updatedStyle});
+  }
+
+  getMergedStyles = () => {
+    const {style} = this.props;
+    const {style: internalStyle} = this.state;
+    return Object.assign({}, internalStyle, style);
   }
 
   get adapter() {
@@ -57,7 +79,9 @@ export default class TopAppBar extends React.Component {
         this.setState({classList});
       },
       hasClass: (className) => this.classes.split(' ').includes(className),
-      registerScrollHandler: (handler) => window.addEventListener('scroll', handler, util.applyPassive()),
+      setStyle: this.setStyle,
+      getTopAppBarHeight: () => this.topAppBarElement.current.clientHeight,
+      registerScrollHandler: (handler) => window.addEventListener('scroll', handler),
       deregisterScrollHandler: (handler) => window.removeEventListener('scroll', handler),
       getViewportScrollY: () => window.pageYOffset,
       getTotalActionItems: () => actionItems && actionItems.length,
@@ -71,7 +95,11 @@ export default class TopAppBar extends React.Component {
     } = this.props;
 
     return (
-      <header className={this.classes}>
+      <header
+        className={this.classes}
+        style={this.getMergedStyles()}
+        ref={this.topAppBarElement}
+      >
         <div className='mdc-top-app-bar__row'>
           <section className='mdc-top-app-bar__section mdc-top-app-bar__section--align-start'>
             {navIcon ? navIcon : null}
@@ -104,6 +132,7 @@ export default class TopAppBar extends React.Component {
 TopAppBar.propTypes = {
   alwaysCollapsed: PropTypes.bool,
   short: PropTypes.bool,
+  fixed: PropTypes.bool,
   prominent: PropTypes.bool,
   title: PropTypes.string,
   actionItems: PropTypes.arrayOf(PropTypes.element),
@@ -113,6 +142,7 @@ TopAppBar.propTypes = {
 TopAppBar.defaultProps = {
   alwaysCollapsed: false,
   short: false,
+  fixed: false,
   prominent: false,
   title: '',
   actionItems: null,
