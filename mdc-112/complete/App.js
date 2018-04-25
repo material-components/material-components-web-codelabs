@@ -4,18 +4,19 @@ import './app.scss';
 
 export default class App extends React.Component {
   state = {
+    isFixed: false,
     isShort: false,
     isRtl: false,
     isProminent: false,
     isAlwaysCollapsed: false,
     noActionItems: false,
     shouldReinit: false
-  }
+  };
 
   componentDidUpdate(prevProps, prevState) {
-    console.log(prevState.isShort)
     const shouldReinit =
       prevState.isShort !== this.state.isShort ||
+      prevState.isFixed !== this.state.isFixed ||
       prevState.noActionItems !== this.state.noActionItems;
 
     // This is a hack: this to teardown and remount the top app bar to
@@ -50,7 +51,7 @@ export default class App extends React.Component {
   }
 
   render() {
-    const {isShort, isRtl, isProminent, isAlwaysCollapsed, shouldReinit} = this.state;
+    const {isFixed, isShort, isRtl, isProminent, isAlwaysCollapsed, shouldReinit} = this.state;
 
     return (
       <section
@@ -62,6 +63,7 @@ export default class App extends React.Component {
             navIcon={this.renderNavIcon()}
             short={isShort}
             prominent={isProminent}
+            fixed={isFixed}
             alwaysCollapsed={isAlwaysCollapsed}
             title='Mountain View, CA'
             actionItems={this.actionItems}
@@ -92,17 +94,20 @@ export default class App extends React.Component {
   }
 
   renderControls() {
-    const {isShort, isProminent} = this.state;
+    const {isShort, isProminent, isAlwaysCollapsed} = this.state;
 
     const checkboxes = [{
+      title: 'Fixed',
+      attr: 'isFixed',
+    }, {
       title: 'Short',
       attr: 'isShort',
-      disabled: isProminent,
+      disabled: isProminent || isAlwaysCollapsed,
     }, {
-      title: 'Always Short',
+      title: 'Always Collapsed',
       attr: 'isAlwaysCollapsed',
       disabled: !isShort,
-    },{
+    }, {
       title: 'RTL',
       attr: 'isRtl',
     }, {

@@ -6,7 +6,12 @@ body {
 }
 
 .demo-text-container {
-  margin: 8px;
+  padding: 8px;
+  padding-top: 68px;
+}
+
+.demo-paragraph:first-child {
+  margin-top: 0;
 }
 
 .demo-controls-box {
