@@ -15,7 +15,6 @@ $mdc-theme-on-background: #442C2E;
 @import "@material/typography/mdc-typography";
 @import "@material/elevation/mdc-elevation";
 
-
 html, body {
   height: 100%;
 }
@@ -42,10 +41,10 @@ body {
 .username,
 .password {
   &:not(.mdc-text-field--invalid) {
-     @include mdc-text-field-label-color(on-primary);
+    @include mdc-text-field-label-color(on-primary);
   }
   &.mdc-text-field--focused:not(.mdc-text-field--invalid)  {
-     @include mdc-text-field-label-color(on-primary);
+    @include mdc-text-field-label-color(on-primary);
   }
 
   display: block;
@@ -72,7 +71,6 @@ body {
 .cancel {
   @include mdc-button-ink-color(on-primary);
 }
-
 
 // Home page styles
 
