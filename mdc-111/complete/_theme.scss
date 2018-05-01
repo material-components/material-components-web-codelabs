@@ -10,13 +10,3 @@ $mdc-theme-primary: $crane-primary-color;
 .crane-text-field {
   margin: 0;
 }
-
-.crane-text-field .crane-text-field__input,
-.crane-select .crane-select__native-control {
-  font-size: 1rem;
-}
-
-.crane-text-field .crane-floating-label,
-.crane-select .crane-select__label {
-  font-size: .8rem;
-}
