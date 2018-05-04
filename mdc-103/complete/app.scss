@@ -118,8 +118,7 @@ body {
 }
 
 .shrine-select-item-divider {
-  @include mdc-theme-prop(border-bottom-color, #EAA4A4);
-
+  border-bottom-color: #EAA4A4;
   width: 50px;
   margin: 0 auto;
   border-bottom-width: 2px;
