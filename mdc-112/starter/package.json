@@ -10,7 +10,7 @@
     "babel-core": "^6.22.1",
     "babel-loader": "^7.0.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
-    "babel-preset-env": "^1.6.1",
+    "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "css-loader": "^0.28.0",
     "extract-loader": "^1.0.2",
