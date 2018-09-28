@@ -1,0 +1,86 @@
+@import "./variables";
+@import "@material/drawer/mdc-drawer";
+@import "@material/image-list/mdc-image-list";
+@import "@material/ripple/mixins";
+@import "@material/list/mdc-list";
+@import "./common";
+
+.home {
+  display: flex; // Flexbox is used to easily arrange the persistent drawer and content side-by-side
+}
+
+.shrine-logo-drawer {
+  display: block;
+  width: 48px;
+  padding: 40px 0 0;
+  margin: 0 auto;
+  fill: currentColor;
+}
+
+.shrine-title {
+  @include mdc-typography(headline6);
+
+  text-align: center;
+  margin: 5px auto;
+}
+
+.product-list {
+  @include mdc-image-list-masonry-columns(4);
+
+  padding: 80px 100px 0 100px;
+  overflow: auto;
+}
+
+.shrine-drawer {
+  @include mdc-drawer-fill-color-accessible(primary);
+  @include mdc-drawer-z-index(0); // Drawer defaults to a higher z-index, but we aren't overlaying it over anything
+
+  text-transform: uppercase;
+
+  .mdc-list {
+    margin: 70px 5px auto 5px;
+  }
+
+  .mdc-list-item {
+    border-radius: 6px;
+    justify-content: center;
+  }
+
+  .mdc-list .mdc-list-item {
+    // This needs 3-class specificity to override MDC Drawer styles
+    @include mdc-states-activated(#fff);
+  }
+}
+
+.shrine-select-item-divider {
+  display: block;
+  border-bottom: 2px solid #EAA4A4;
+  width: 50px;
+  position: relative;
+  top: -8px;
+}
+
+.shrine-drawer .shrine-select-item-divider {
+  // This needs 2-class specificity to override .mdc-drawer .mdc-list-divider styles in MDC Drawer
+  margin: 0 auto;
+}
+
+.mdc-image-list__supporting {
+  justify-content: center;
+}
+
+.mdc-image-list__item {
+  padding: 10px;
+}
+
+.mdc-image-list__label {
+  @include mdc-typography(subtitle2);
+}
+
+.shrine-body {
+  @include mdc-elevation(4);
+
+  display: block;
+  overflow: auto;
+  z-index: 0; // Necessary to appear over the drawer
+}
