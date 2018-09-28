@@ -1,17 +1,6 @@
 @import "@material/button/mdc-button";
 @import "@material/textfield/mdc-text-field";
-
-html, body {
-  height: 100%;
-}
-
-body {
-  font-family: 'Roboto';
-  margin: 0;
-  padding-top: 0.1px; // Prevent header h1 margin from pushing body down
-}
-
-// Login page styles
+@import "./common";
 
 .header {
   text-align: center;
@@ -40,10 +29,4 @@ body {
 
 .button-container button {
   margin: 3px;
-}
-
-// Home page styles
-
-.home {
-  display: flex; // Flexbox is used to easily arrange the persistent drawer and content side-by-side
 }
