@@ -1,0 +1,49 @@
+@import "./variables";
+@import "@material/button/mdc-button";
+@import "@material/textfield/mdc-text-field";
+@import "./common";
+
+.header {
+  text-align: center;
+}
+
+.shrine-logo {
+  width: 150px;
+  height: 150px;
+  padding-top: 80px;
+  fill: currentColor;
+}
+
+.username,
+.password {
+  &:not(.mdc-text-field--invalid) {
+    @include mdc-text-field-label-color(on-primary);
+  }
+  &.mdc-text-field--focused:not(.mdc-text-field--invalid)  {
+    @include mdc-text-field-label-color(on-primary);
+  }
+
+  display: block;
+  width: 300px;
+  margin: 20px auto;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  width: 300px;
+  margin: auto;
+}
+
+.button-container button {
+  margin: 3px;
+}
+
+.shrine-login {
+  background-color: $mdc-theme-background;
+  color: $mdc-theme-on-background;
+}
+
+.cancel {
+  @include mdc-button-ink-color(on-primary);
+}
