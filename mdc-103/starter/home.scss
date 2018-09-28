@@ -1,0 +1,27 @@
+@import "@material/drawer/mdc-drawer";
+@import "@material/image-list/mdc-image-list";
+@import "@material/list/mdc-list";
+@import "./common";
+
+.home {
+  display: flex; // Flexbox is used to easily arrange the persistent drawer and content side-by-side
+}
+
+.shrine-logo-drawer {
+  display: block;
+  width: 48px;
+  padding: 40px 0 0;
+  margin: 0 auto;
+  fill: currentColor;
+}
+
+.shrine-title {
+  text-align: center;
+  margin: 5px auto;
+}
+
+.product-list {
+  @include mdc-image-list-standard-columns(4);
+
+  overflow: auto;
+}
