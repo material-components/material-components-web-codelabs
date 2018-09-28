@@ -1,6 +1,7 @@
 @import "./variables";
 @import "@material/drawer/mdc-drawer";
 @import "@material/image-list/mdc-image-list";
+@import "@material/ripple/mixins";
 @import "@material/list/mdc-list";
 @import "./common";
 
@@ -33,7 +34,6 @@
 .shrine-drawer {
   @include mdc-drawer-fill-color-accessible(primary);
   @include mdc-drawer-z-index(0); // Drawer defaults to a higher z-index, but we aren't overlaying it over anything
-  // @include mdc-drawer-item-text-ink-color(on-primary);
 
   text-transform: uppercase;
 
@@ -45,19 +45,23 @@
     border-radius: 6px;
     justify-content: center;
   }
+
+  .mdc-list .mdc-list-item {
+    // This needs 3-class specificity to override MDC Drawer styles
+    @include mdc-states-activated(#fff);
+  }
 }
 
 .shrine-select-item-divider {
   display: block;
-  border-bottom-color: #EAA4A4;
+  border-bottom: 2px solid #EAA4A4;
   width: 50px;
-  border-bottom-width: 2px;
   position: relative;
-  top: -5px;
+  top: -8px;
 }
 
 .shrine-drawer .shrine-select-item-divider {
-  // This needs 2-class specificity to override .mdc-drawer .mdc-list-divider styles in MDC Web
+  // This needs 2-class specificity to override .mdc-drawer .mdc-list-divider styles in MDC Drawer
   margin: 0 auto;
 }
 
