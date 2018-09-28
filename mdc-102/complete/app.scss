@@ -52,6 +52,7 @@ body {
 }
 
 .shrine-logo-drawer {
+  display: block;
   width: 48px;
   padding: 40px 0 0;
   margin: 0 auto;
@@ -59,7 +60,7 @@ body {
 }
 
 .shrine-title {
-  align-self: center;
+  text-align: center;
   margin: 5px auto;
 }
 
