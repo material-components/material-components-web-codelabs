@@ -47,7 +47,7 @@ export default class TopAppBar extends React.Component {
   initializeFoundation = () => {
     if (this.props.short) {
       this.foundation_ = new MDCShortTopAppBarFoundation(this.adapter);
-    } else if(this.props.fixed) {
+    } else if (this.props.fixed) {
       this.foundation_ = new MDCFixedTopAppBarFoundation(this.adapter);
     } else {
       this.foundation_ = new MDCTopAppBarFoundation(this.adapter);
@@ -72,17 +72,19 @@ export default class TopAppBar extends React.Component {
     const {actionItems} = this.props;
 
     return {
+      hasClass: (className) => this.classes.split(' ').includes(className),
       addClass: (className) => this.setState({classList: this.state.classList.add(className)}),
       removeClass: (className) => {
         const {classList} = this.state;
         classList.delete(className);
         this.setState({classList});
       },
-      hasClass: (className) => this.classes.split(' ').includes(className),
       setStyle: this.setStyle,
       getTopAppBarHeight: () => this.topAppBarElement.current.clientHeight,
       registerScrollHandler: (handler) => window.addEventListener('scroll', handler),
       deregisterScrollHandler: (handler) => window.removeEventListener('scroll', handler),
+      registerResizeHandler: (handler) => window.addEventListener('resize', handler),
+      deregisterResizeHandler: (handler) => window.removeEventListener('resize', handler),
       getViewportScrollY: () => window.pageYOffset,
       getTotalActionItems: () => actionItems && actionItems.length,
     };
@@ -121,7 +123,7 @@ export default class TopAppBar extends React.Component {
 
     return (
       <section className='mdc-top-app-bar__section mdc-top-app-bar__section--align-end' role='toolbar'>
-        {/* need to close element to set key */}
+        {/* need to clone element to set key */}
         {actionItems.map((item, key) => React.cloneElement(item, {key}))}
       </section>
     );

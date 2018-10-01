@@ -153,7 +153,7 @@ export default class App extends React.Component {
       <a
         className='material-icons mdc-top-app-bar__navigation-icon'
         href='#'
-        onClick={() => {console.log('hey')}}>
+        onClick={() => {console.log('nav icon clicked')}}>
         menu
       </a>
     );
