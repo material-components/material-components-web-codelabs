@@ -7,22 +7,26 @@
   <link rel="shortcut icon" href="https://material.io/favicon.ico">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
-  <link rel="stylesheet" href="bundle.css">
+  <link rel="stylesheet" href="bundle-home.css">
 </head>
 <body class="home">
-  <nav class="shrine-drawer mdc-drawer mdc-drawer--permanent">
-    <svg class="shrine-logo-drawer" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="48px" height="48px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve" fill="#000000">
-      <g id="XMLID_2_">
-        <g id="XMLID_4_">
-          <path id="XMLID_5_" d="M17,2H7L2,6.62L12,22L22,6.62L17,2z M16.5,3.58l3.16,2.92H16.5V3.58z M7.59,3.5H15v3H4.34L7.59,3.5z     M11.25,18.1L7.94,13h3.31V18.1z M11.25,11.5H6.96L4.69,8h6.56V11.5z M16.5,12.32 M12.75,18.09V8h6.56L12.75,18.09z"/>
+  <aside class="mdc-drawer shrine-drawer">
+    <div class="mdc-drawer__header">
+      <svg class="shrine-logo-drawer" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+         width="48px" height="48px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve" fill="#000000">
+        <g id="XMLID_2_">
+          <g id="XMLID_4_">
+            <path id="XMLID_5_" d="M17,2H7L2,6.62L12,22L22,6.62L17,2z M16.5,3.58l3.16,2.92H16.5V3.58z M7.59,3.5H15v3H4.34L7.59,3.5z
+               M11.25,18.1L7.94,13h3.31V18.1z M11.25,11.5H6.96L4.69,8h6.56V11.5z M16.5,12.32 M12.75,18.09V8h6.56L12.75,18.09z"/>
+          </g>
+          <rect id="XMLID_1_" fill="none" width="24" height="24"/>
         </g>
-        <rect id="XMLID_1_" fill="none" width="24" height="24"/>
-      </g>
-    </svg>
-    <h1 class="shrine-title">SHRINE</h1>
+      </svg>
+      <h1 class="shrine-title">SHRINE</h1>
+    </div>
     <div class="mdc-drawer__content">
       <nav class="mdc-list">
-        <a class="mdc-list-item" href="#">
+        <a class="mdc-list-item mdc-list-item--activated" aria-selected="true" href="#">
           Featured
         </a>
         <li class="shrine-select-item-divider mdc-list-divider" role="separator"></li>
@@ -49,106 +53,108 @@
         </a>
       </nav>
     </div>
-  </nav>
+  </aside>
   <div class="shrine-body">
     <ul class="mdc-image-list mdc-image-list--masonry product-list">
-     <li class="mdc-image-list__item">
-       <img class="mdc-image-list__image" src="assets/ginger-scarf.jpg">
-       <div class="mdc-image-list__supporting">
-         <span class="mdc-image-list__label">Ginger scarf</span>
-       </div>
-     </li>
-     <li class="mdc-image-list__item">
-       <img class="mdc-image-list__image" src="assets/blue-stone-mug.jpg">
-       <div class="mdc-image-list__supporting">
-         <span class="mdc-image-list__label">Blue stone mug</span>
-       </div>
-     </li>
-     <li class="mdc-image-list__item">
-       <img class="mdc-image-list__image" src="assets/cerise-scallop.jpg">
-       <div class="mdc-image-list__supporting">
-         <span class="mdc-image-list__label">Cerise scallop tee</span>
-       </div>
-     </li>
-     <li class="mdc-image-list__item">
-       <img class="mdc-image-list__image" src="assets/chambray-napkins.jpg">
-       <div class="mdc-image-list__supporting">
-         <span class="mdc-image-list__label">Chambray napkins</span>
-       </div>
-     </li>
-     <li class="mdc-image-list__item">
-       <img class="mdc-image-list__image" src="assets/fine-lines.jpg">
-       <div class="mdc-image-list__supporting">
-         <span class="mdc-image-list__label">Fine lines tee</span>
-       </div>
-     </li>
-     <li class="mdc-image-list__item">
-       <img class="mdc-image-list__image" src="assets/garden-strand.jpg">
-       <div class="mdc-image-list__supporting">
-         <span class="mdc-image-list__label">Garden strand</span>
-       </div>
-     </li>
-     <li class="mdc-image-list__item">
-       <img class="mdc-image-list__image" src="assets/gatsby-hat.jpg">
-       <div class="mdc-image-list__supporting">
-         <span class="mdc-image-list__label">Gatsby hat</span>
-       </div>
-     </li>
-     <li class="mdc-image-list__item">
-       <img class="mdc-image-list__image" src="assets/gilt-desk-trio.jpg">
-       <div class="mdc-image-list__supporting">
-         <span class="mdc-image-list__label">Gilt desk trio</span>
-       </div>
-     </li>
-     <li class="mdc-image-list__item">
-       <img class="mdc-image-list__image" src="assets/kitchen-quattro.jpg">
-       <div class="mdc-image-list__supporting">
-         <span class="mdc-image-list__label">Kitchen quattro</span>
-       </div>
-     </li>
-     <li class="mdc-image-list__item">
-       <img class="mdc-image-list__image" src="assets/seabreeze-sweater.jpg">
-       <div class="mdc-image-list__supporting">
-         <span class="mdc-image-list__label">Seabreeze sweater</span>
-       </div>
-     </li>
-     <li class="mdc-image-list__item">
-       <img class="mdc-image-list__image" src="assets/shrug-bag.jpg">
-       <div class="mdc-image-list__supporting">
-         <span class="mdc-image-list__label">Shrug bag</span>
-       </div>
-     </li>
-     <li class="mdc-image-list__item">
-       <img class="mdc-image-list__image" src="assets/stella-sunglasses.jpg">
-       <div class="mdc-image-list__supporting">
-         <span class="mdc-image-list__label">Stella sunglasses</span>
-       </div>
-     </li>
-     <li class="mdc-image-list__item">
-       <img class="mdc-image-list__image" src="assets/surf-and-perf.jpg">
-       <div class="mdc-image-list__supporting">
-         <span class="mdc-image-list__label">Surf and perf shirt</span>
-       </div>
-     </li>
-     <li class="mdc-image-list__item">
-       <img class="mdc-image-list__image" src="assets/vagabond-sack.jpg">
-       <div class="mdc-image-list__supporting">
-         <span class="mdc-image-list__label">Vagabond sack</span>
-       </div>
-     </li>
-     <li class="mdc-image-list__item">
-       <img class="mdc-image-list__image" src="assets/walter-henley.jpg">
-       <div class="mdc-image-list__supporting">
-         <span class="mdc-image-list__label">Walter henley (white)</span>
-       </div>
-     </li>
-     <li class="mdc-image-list__item">
-       <img class="mdc-image-list__image" src="assets/weave-keyring.jpg">
-       <div class="mdc-image-list__supporting">
-         <span class="mdc-image-list__label">Weave keyring</span>
-       </div>
-     </li>
+      <li class="mdc-image-list__item">
+        <img class="mdc-image-list__image" src="assets/ginger-scarf.jpg">
+        <div class="mdc-image-list__supporting">
+          <span class="mdc-image-list__label">Ginger scarf</span>
+        </div>
+      </li>
+      <li class="mdc-image-list__item">
+        <img class="mdc-image-list__image" src="assets/blue-stone-mug.jpg">
+        <div class="mdc-image-list__supporting">
+          <span class="mdc-image-list__label">Blue stone mug</span>
+        </div>
+      </li>
+      <li class="mdc-image-list__item">
+        <img class="mdc-image-list__image" src="assets/cerise-scallop.jpg">
+        <div class="mdc-image-list__supporting">
+          <span class="mdc-image-list__label">Cerise scallop tee</span>
+        </div>
+      </li>
+      <li class="mdc-image-list__item">
+        <img class="mdc-image-list__image" src="assets/chambray-napkins.jpg">
+        <div class="mdc-image-list__supporting">
+          <span class="mdc-image-list__label">Chambray napkins</span>
+        </div>
+      </li>
+      <li class="mdc-image-list__item">
+        <img class="mdc-image-list__image" src="assets/fine-lines.jpg">
+        <div class="mdc-image-list__supporting">
+          <span class="mdc-image-list__label">Fine lines tee</span>
+        </div>
+      </li>
+      <li class="mdc-image-list__item">
+        <img class="mdc-image-list__image" src="assets/garden-strand.jpg">
+        <div class="mdc-image-list__supporting">
+          <span class="mdc-image-list__label">Garden strand</span>
+        </div>
+      </li>
+      <li class="mdc-image-list__item">
+        <img class="mdc-image-list__image" src="assets/gatsby-hat.jpg">
+        <div class="mdc-image-list__supporting">
+          <span class="mdc-image-list__label">Gatsby hat</span>
+        </div>
+      </li>
+      <li class="mdc-image-list__item">
+        <img class="mdc-image-list__image" src="assets/gilt-desk-trio.jpg">
+        <div class="mdc-image-list__supporting">
+          <span class="mdc-image-list__label">Gilt desk trio</span>
+        </div>
+      </li>
+      <li class="mdc-image-list__item">
+        <img class="mdc-image-list__image" src="assets/kitchen-quattro.jpg">
+        <div class="mdc-image-list__supporting">
+          <span class="mdc-image-list__label">Kitchen quattro</span>
+        </div>
+      </li>
+      <li class="mdc-image-list__item">
+        <img class="mdc-image-list__image" src="assets/seabreeze-sweater.jpg">
+        <div class="mdc-image-list__supporting">
+          <span class="mdc-image-list__label">Seabreeze sweater</span>
+        </div>
+      </li>
+      <li class="mdc-image-list__item">
+        <img class="mdc-image-list__image" src="assets/shrug-bag.jpg">
+        <div class="mdc-image-list__supporting">
+          <span class="mdc-image-list__label">Shrug bag</span>
+        </div>
+      </li>
+      <li class="mdc-image-list__item">
+        <img class="mdc-image-list__image" src="assets/stella-sunglasses.jpg">
+        <div class="mdc-image-list__supporting">
+          <span class="mdc-image-list__label">Stella sunglasses</span>
+        </div>
+      </li>
+      <li class="mdc-image-list__item">
+        <img class="mdc-image-list__image" src="assets/surf-and-perf.jpg">
+        <div class="mdc-image-list__supporting">
+          <span class="mdc-image-list__label">Surf and perf shirt</span>
+        </div>
+      </li>
+      <li class="mdc-image-list__item">
+        <img class="mdc-image-list__image" src="assets/vagabond-sack.jpg">
+        <div class="mdc-image-list__supporting">
+          <span class="mdc-image-list__label">Vagabond sack</span>
+        </div>
+      </li>
+      <li class="mdc-image-list__item">
+        <img class="mdc-image-list__image" src="assets/walter-henley.jpg">
+        <div class="mdc-image-list__supporting">
+          <span class="mdc-image-list__label">Walter henley (white)</span>
+        </div>
+      </li>
+      <li class="mdc-image-list__item">
+        <img class="mdc-image-list__image" src="assets/weave-keyring.jpg">
+        <div class="mdc-image-list__supporting">
+          <span class="mdc-image-list__label">Weave keyring</span>
+        </div>
+      </li>
     </ul>
-</div>
+  </div>
+
+  <script src="bundle-home.js" async></script>
 </body>
 </html>
