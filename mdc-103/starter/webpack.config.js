@@ -1,45 +1,72 @@
+function getStyleUse(bundleFilename) {
+  return [
+    {
+      loader: 'file-loader',
+      options: {
+        name: bundleFilename,
+      },
+    },
+    { loader: 'extract-loader' },
+    { loader: 'css-loader' },
+    {
+      loader: 'sass-loader',
+      options: {
+        includePaths: ['./node_modules'],
+      }
+    },
+  ];
+}
+
 module.exports = [
   {
-    entry: './app.scss',
+    entry: './login.scss',
     output: {
-      // This is necessary for webpack to compile
-      // But we never use style-bundle.js
-      filename: 'style-bundle.js',
+      // This is necessary for webpack to compile, but we never reference this js file.
+      filename: 'style-bundle-login.js',
     },
     module: {
       rules: [{
-        test: /\.scss$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: 'bundle.css',
-            },
-          },
-          { loader: 'extract-loader' },
-          { loader: 'css-loader' },
-          {
-            loader: 'sass-loader',
-            options: {
-              includePaths: ['./node_modules'],
-            }
-          },
-        ]
+        test: /login.scss$/,
+        use: getStyleUse('bundle-login.css')
       }]
     },
   },
   {
-    entry: "./app.js",
+    entry: './home.scss',
     output: {
-      filename: "bundle.js"
+      // This is necessary for webpack to compile, but we never reference this js file.
+      filename: 'style-bundle-home.js',
+    },
+    module: {
+      rules: [{
+        test: /home.scss$/,
+        use: getStyleUse('bundle-home.css')
+      }]
+    },
+  },
+  {
+    entry: "./login.js",
+    output: {
+      filename: "bundle-login.js"
     },
     module: {
       loaders: [{
-        test: /\.js$/,
+        test: /login.js$/,
         loader: 'babel-loader',
-        query: {
-          presets: ['env']
-        }
+        query: {presets: ['env']}
+      }]
+    },
+  },
+  {
+    entry: "./home.js",
+    output: {
+      filename: "bundle-home.js"
+    },
+    module: {
+      loaders: [{
+        test: /home.js$/,
+        loader: 'babel-loader',
+        query: {presets: ['env']}
       }]
     },
   }
