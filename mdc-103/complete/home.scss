@@ -1,9 +1,10 @@
-@import "./variables";
+@import "./common";
 @import "@material/drawer/mdc-drawer";
+@import "@material/list/mdc-list";
 @import "@material/image-list/mdc-image-list";
 @import "@material/ripple/mixins";
-@import "@material/list/mdc-list";
-@import "./common";
+@import "@material/typography/mdc-typography";
+@import "@material/elevation/mdc-elevation";
 
 .home {
   display: flex; // Flexbox is used to easily arrange the persistent drawer and content side-by-side
@@ -27,13 +28,26 @@
 .product-list {
   @include mdc-image-list-masonry-columns(4);
 
-  padding: 80px 100px 0 100px;
   overflow: auto;
+  padding: 80px 100px 0;
+
+  .mdc-image-list__supporting {
+    justify-content: center;
+  }
+
+  .mdc-image-list__item {
+    padding: 10px;
+  }
+
+  .mdc-image-list__label {
+    @include mdc-typography(subtitle2);
+  }
 }
 
 .shrine-drawer {
   @include mdc-drawer-fill-color-accessible(primary);
-  @include mdc-drawer-z-index(0); // Drawer defaults to a higher z-index, but we aren't overlaying it over anything
+  // Drawer defaults to a higher z-index, but we aren't overlaying it over anything
+  @include mdc-drawer-z-index(0);
 
   text-transform: uppercase;
 
@@ -46,35 +60,24 @@
     justify-content: center;
   }
 
+  // This needs 3-class specificity to override MDC Drawer styles
   .mdc-list .mdc-list-item {
-    // This needs 3-class specificity to override MDC Drawer styles
     @include mdc-states-activated(#fff);
   }
 }
 
 .shrine-select-item-divider {
   display: block;
-  border-bottom: 2px solid #EAA4A4;
+  border-bottom-color: #EAA4A4;
+  border-bottom-width: 2px;
   width: 50px;
   position: relative;
   top: -8px;
 }
 
+// This needs 2-class specificity to override MDC Drawer styles
 .shrine-drawer .shrine-select-item-divider {
-  // This needs 2-class specificity to override .mdc-drawer .mdc-list-divider styles in MDC Drawer
   margin: 0 auto;
-}
-
-.mdc-image-list__supporting {
-  justify-content: center;
-}
-
-.mdc-image-list__item {
-  padding: 10px;
-}
-
-.mdc-image-list__label {
-  @include mdc-typography(subtitle2);
 }
 
 .shrine-body {
@@ -82,5 +85,5 @@
 
   display: block;
   overflow: auto;
-  z-index: 0; // Necessary to appear over the drawer
+  z-index: 0; // Elevate over the drawer
 }
