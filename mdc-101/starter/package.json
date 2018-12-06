@@ -11,10 +11,11 @@
     "babel-loader": "^7.0.0",
     "babel-preset-env": "^1.7.0",
     "css-loader": "^0.28.0",
+    "dart-sass": "^1.15.1",
     "extract-loader": "^1.0.2",
+    "fibers": "^3.1.1",
     "file-loader": "^1.1.11",
-    "node-sass": "^4.9.0",
-    "sass-loader": "^6.0.4",
+    "sass-loader": "^7.1.0",
     "webpack": "^3.0.0",
     "webpack-dev-server": "^2.4.3"
   }
