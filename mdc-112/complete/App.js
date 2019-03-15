@@ -1,5 +1,6 @@
 import React from 'react';
 import TopAppBar from './TopAppBar';
+import classnames from 'classnames';
 import './app.scss';
 
 export default class App extends React.Component {
@@ -69,7 +70,10 @@ export default class App extends React.Component {
             actionItems={this.actionItems}
           />
         }
-        <div className='demo-text-container'>
+        <div className={classnames('mdc-top-app-bar--fixed-adjust', {
+          'mdc-top-app-bar--short-fixed-adjust': isShort || isAlwaysCollapsed,
+          'mdc-top-app-bar--prominent-fixed-adjust': isProminent,
+        })}>
           {this.renderDemoParagraphs()}
         </div>
 
@@ -79,7 +83,7 @@ export default class App extends React.Component {
   }
 
   renderDemoParagraphs() {
-    const createDemoParagraph = (key) => (<p className='demo-paragraph' key={key}>
+    const createDemoParagraph = (key) => (<p key={key}>
       Pellentesque habitant morbi tristique senectus et netus et malesuada fames
       ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget,
       tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean

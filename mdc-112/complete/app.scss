@@ -5,15 +5,6 @@ body {
   margin: 0;
 }
 
-.demo-text-container {
-  padding: 8px;
-  padding-top: 68px;
-}
-
-.demo-paragraph:first-child {
-  margin-top: 0;
-}
-
 .demo-controls-box {
   @include mdc-elevation(4);
   min-width: 160px;
