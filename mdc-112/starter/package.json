@@ -5,7 +5,7 @@
   "scripts": {
     "start": "webpack-dev-server --progress"
   },
-  "license": "Apache-2.0",
+  "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.22.1",
     "babel-loader": "^7.0.0",
@@ -13,19 +13,20 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "css-loader": "^0.28.0",
+    "dart-sass": "^1.17.2",
     "extract-loader": "^1.0.2",
+    "fibers": "^3.1.1",
     "file-loader": "^1.1.11",
-    "node-sass": "^4.11.0",
-    "sass-loader": "^6.0.4",
+    "sass-loader": "^7.1.0",
     "webpack": "^3.0.0",
     "webpack-dev-server": "^2.4.3"
   },
   "dependencies": {
-    "@material/top-app-bar": "^0.40.0",
-    "@material/typography": "^0.39.0",
-    "classnames": "^2.2.5",
+    "@material/top-app-bar": "^1.0.1",
+    "@material/typography": "^1.0.0",
+    "classnames": "^2.2.6",
     "prop-types": "^15.6.1",
-    "react": "^16.3.2",
-    "react-dom": "^16.3.2"
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2"
   }
 }

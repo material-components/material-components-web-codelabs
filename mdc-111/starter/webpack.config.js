@@ -30,6 +30,8 @@ module.exports = [
             loader: 'sass-loader',
             options: {
               includePaths: ['./node_modules'],
+              implementation: require('dart-sass'),
+              fiber: require('fibers'),
             }
           },
         ]
