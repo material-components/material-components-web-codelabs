@@ -22,8 +22,8 @@
     "webpack-dev-server": "^2.4.3"
   },
   "dependencies": {
-    "@material/top-app-bar": "^1.0.1",
-    "@material/typography": "^1.0.0",
+    "@material/top-app-bar": "^4.0.0",
+    "@material/typography": "^4.0.0",
     "classnames": "^2.2.6",
     "prop-types": "^15.6.1",
     "react": "^16.4.2",
