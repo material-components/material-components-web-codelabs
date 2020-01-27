@@ -22,9 +22,9 @@
     "webpack-dev-server": "^2.4.3"
   },
   "dependencies": {
-    "@material/button": "^1.0.1",
-    "@material/ripple": "^1.0.1",
-    "@material/select": "^1.0.1",
-    "@material/textfield": "^1.0.1"
+    "@material/button": "^4.0.0",
+    "@material/ripple": "^4.0.0",
+    "@material/select": "^4.0.0",
+    "@material/textfield": "^4.0.0"
   }
 }
