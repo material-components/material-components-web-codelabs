@@ -25,15 +25,17 @@
   </section>
 
   <form action="home.html">
-    <label class="mdc-text-field username">
+    <label class="mdc-text-field mdc-text-field--filled username">
+      <span class="mdc-text-field__ripple"></span>
       <input type="text" class="mdc-text-field__input" aria-labelledby="username-label" name="username" required>
       <span class="mdc-floating-label" id="username-label">Username</span>
-      <div class="mdc-line-ripple"></div>
+      <span class="mdc-line-ripple"></span>
     </label>
-    <label class="mdc-text-field password">
+    <label class="mdc-text-field mdc-text-field--filled password">
+      <span class="mdc-text-field__ripple"></span>
       <input type="password" class="mdc-text-field__input" aria-labelledby="password-label" name="password" required minlength="8">
       <span class="mdc-floating-label" id="password-label">Password</span>
-      <div class="mdc-line-ripple"></div>
+      <span class="mdc-line-ripple"></span>
     </label>
     <div class="button-container">
       <button type="button" class="mdc-button cancel">

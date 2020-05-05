@@ -22,7 +22,7 @@
     @include mdc-text-field-label-color(on-primary);
   }
 
-  display: block;
+  display: flex;
   width: 300px;
   margin: 20px auto;
 }
