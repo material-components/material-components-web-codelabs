@@ -1,12 +1,32 @@
 @import "./common";
+@import "@material/textfield/mdc-text-field";
+@import "@material/button/mdc-button";
 
 .header {
-  text-align: center;
+    text-align: center;
 }
 
 .shrine-logo {
-  width: 150px;
-  height: 150px;
-  padding-top: 80px;
-  fill: currentColor;
+    width: 150px;
+    height: 150px;
+    padding-top: 80px;
+    fill: currentColor;
+}
+
+.username,
+.password {
+    display: block;
+    width: 300px;
+    margin: 20px auto;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    width: 300px;
+    margin: auto;
+}
+
+.button-container button {
+    margin: 3px;
 }
