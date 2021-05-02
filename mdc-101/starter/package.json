@@ -18,5 +18,8 @@
     "sass-loader": "^7.1.0",
     "webpack": "^3.0.0",
     "webpack-dev-server": "^2.4.3"
+  },
+  "dependencies": {
+    "@material/textfield": "^6.0.0"
   }
 }
